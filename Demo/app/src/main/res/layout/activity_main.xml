@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="功能说明:\n一键登录：先预取号，预取号成功后可一键登录\n 本机校验：输入手机号码后进行本机校验" />
+
+    <TextView
+        android:id="@+id/tv_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="电信号码预取号成功后会在此展示手机掩码" />
+
+    <Button
+        android:id="@+id/btn_prefetch_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="预取号" />
+
+    <Button
+        android:id="@+id/btn_one_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一键登录" />
+
+    <EditText
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本机校验" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="弹窗模式" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="reset"
+            android:text="重置为默认配置" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch_dynamic_pull_config"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="拉取UI配置(仅供QA自动化测试使用)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="freshUiConfig"
+            android:text="刷新UI配置" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <Switch
+        android:id="@+id/switch_on_trial_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用试用业务id(仅供内部QA测试使用)" />
+</LinearLayout>
