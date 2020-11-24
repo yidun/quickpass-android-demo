@@ -43,6 +43,7 @@ dependencies {
     implementation(name: 'CMCCSSOSDK-release', ext: 'aar')
     implementation(name: 'Ui-factory_oauth_mobile_3.8.3', ext: 'aar')
     implementation(name: 'CTAccount_sdk_api_v3.7.0_all', ext: 'aar')
+    implementation(name: 'base-sdk-libary-release', ext: 'aar')
     implementation 'com.google.code.gson:gson:2.8.5'    // 配置对gson的依赖
 }
 ```
@@ -398,6 +399,7 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | setNavigationIcon(String backIcon)                | 设置导航栏返回图标，backIcon 导航栏图标名称，需要放置在drawable目录下， |
 | setNavigationBackIconWidth(int backIconWidth)     | 设置导航栏返回图标的宽度                                     |
 | setNavigationBackIconHeight(int backIconHeight)   | 设置导航栏返回图标的高度                                     |
+| setHideNavigationBackIcon(boolean isHideBackIcon) | 设置隐藏导航栏返回按钮                                       |
 | setNavigationBackgroundColor(int backgroundColor) | 设置导航栏背景颜色                                           |
 | setNavigationHeight(int navHeight)                | 设置导航栏高度，单位dp                                       |
 | setNavigationTitle(String title)                  | 设置导航栏标题                                               |
@@ -488,6 +490,7 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | :----------------------------------------------------------- | ------------------------------------------------------------ |
 | setProtocolPageNavTitle(String protocolNavTitle)             | 设置协议Web页面导航栏标题，如果需要根据不同运营商设置不同标题，可使用下面重载接口 |
 | setProtocolPageNavTitle(String cmProtocolNavTitle, String cuProtocolNavTitle, String ctProtocolNavTitle) | 设置协议Web页面导航栏标题，可针对不同运营商单独设置          |
+| setProtocolPageNavTitle(String cmProtocolNavTitle, String cuProtocolNavTitle,                                        String ctProtocolNavTitle, String protocolTextNavTitle, String protocol2TextNavTitle) | 设置协议Web页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
 | setProtocolPageNavTitleColor(int protocolNavTitleColor)      | 设置协议Web页面导航栏标题颜色                                |
 | setProtocolPageNavBackIcon(String protocolNavBackIcon)       | 设置协议Web页面导航栏返回图标                                |
 | setProtocolPageNavColor(int protocolNavColor)                | 设置协议Web页面导航栏颜色                                    |
