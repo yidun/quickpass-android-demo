@@ -512,6 +512,7 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | setLoginListener(LoginListener loginListener)                | 设置未同意隐私协议但点击一键登录按钮时的事件监听器，可用于自定义相关提示信息，使用示例可参看Demo示例工程 |
 | setClickEventListener(ClickEventListener clickEventListener) | 设置授权页面点击事件监听，包括左上角返回按钮，登录按钮，隐私协议复选框，隐私协议。当这4类元素被点击时会回调传入的ClickEventListener的onClick(int viewType, int code)接口，viewType为1时表示隐私协议，2表示复选框，3表示左上角返回按钮，4表示登录按钮。当viewType为2或4时，code字段为1则表示复选框勾选，为0则表示复选框未勾选 |
 | setActivityTranslateAnimation(String enterAnimation, String exitAnimation) | 设置授权页进场与出场动画，enterAnimation进场动画xml无后缀文件名，exitAnimation出场动画xml无后缀文件名，如进场动画文件名为activity_enter_anim.xml，则进场动画参数传入“activity_enter_anim" |
+| setActivityLifecycleCallbacks(ActivityLifecycleCallbacks Callbacks)      | 设置登录页面生命周期监听回调 |
 
 ## 6. 弹窗模式与横竖屏设置
 
