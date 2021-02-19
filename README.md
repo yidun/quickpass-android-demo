@@ -671,6 +671,7 @@ UnifyUiConfig uiConfig = new UnifyUiConfig.Builder()
 ## 9 防混淆配置
 
 ```
+-dontwarn com.cmic.sso.wy.**
 -dontwarn com.cmic.sso.sdk.**
 -keep public class com.cmic.sso.sdk.**{*;}
 -keep class cn.com.chinatelecom.account.api.**{*;}
@@ -691,6 +692,7 @@ UnifyUiConfig uiConfig = new UnifyUiConfig.Builder()
 }
 -dontwarn com.sdk.**
 -keep class com.sdk.** { *;}
+-dontwarn com.netease.nis.basesdk.HttpUtil
 ```
 
 ## 10 常见问题
