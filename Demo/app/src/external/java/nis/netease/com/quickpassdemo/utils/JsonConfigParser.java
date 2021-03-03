@@ -19,10 +19,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import nis.netease.com.quickpassdemo.QuickLoginApplication;
+
 /**
  * Created by hzhuqi on 2020/1/2
  */
 public class JsonConfigParser {
+    private int statusBarColor;
     private String navBackIcon;
     private int navBackIconWidth = 25;
     private int navBackIconHeight = 25;
@@ -30,6 +33,7 @@ public class JsonConfigParser {
     private String navTitle;
     private int navTitleColor;
     private boolean isHideNav = false;
+    private boolean isHideBackIcon = false;
     private String logoIconName;
     private int logoWidth;
     private int logoHeight;
@@ -39,16 +43,19 @@ public class JsonConfigParser {
     private boolean isHideLogo = false;
     private int maskNumberColor;
     private int maskNumberSize;
+    private int maskNumberDpSize;
     private int maskNumberTopYOffset;
     private int maskNumberBottomYOffset;
     private int maskNumberXOffset;
     private int sloganSize = 10;
+    private int sloganDpSize;
     private int sloganColor = Color.BLUE;
     private int sloganTopYOffset;
     private int sloganBottomYOffset;
     private int sloganXOffset;
     private String loginBtnText = "本机号码一键登录";
     private int loginBtnTextSize = 15;
+    private int loginBtnTextDpSize;
     private int loginBtnTextColor = -1;
     private int loginBtnWidth;
     private int loginBtnHeight;
@@ -59,12 +66,16 @@ public class JsonConfigParser {
     private int privacyTextColor = Color.BLACK;
     private int privacyProtocolColor = Color.GRAY;
     private int privacySize;
+    private int privacyDpSize;
     private int privacyTopYOffset;
     private int privacyBottomYOffset;
-    private int privacyXOffset;
+    private int privacyMarginLeft;
+    private int privacyMarginRight;
     private boolean privacyState = true;
+    private boolean isHidePrivacySmh = false;
     private boolean isHidePrivacyCheckBox = false;
     private boolean isPrivacyTextGravityCenter = false;
+    private int checkBoxGravity;
     private String checkedImageName = "yd_checkbox_checked";
     private String unCheckedImageName = "yd_checkbox_unchecked";
     private String privacyTextStart = "登录即同意";
@@ -74,8 +85,24 @@ public class JsonConfigParser {
     private String protocol2Link;
     private String privacyTextEnd = "且授权使用本机号码登录";
     private String protocolNavTitle;
+    private String cmProtocolNavTitle;
+    private String ctProtocolNavTitle;
+    private String cuProtocolNavTitle;
+    private String customProtocolNavTitle;
+    private String customProtocol2NavTitle;
     private String protocolNavBackIcon;
+    private int protocolNavHeight;
+    private int protocolNavTitleSize;
+    private int protocolNavTitleColor;
+    private int protocolNavTitleDpSize;
+    private int protocolNavBackIconWidth = 25;
+    private int protocolNavBackIconHeight = 25;
     private int protocolNavColor;
+    private String backgroundImage;
+    private String backgroundGif;
+    private String backgroundVideo;
+    private String backgroundVideoImage;
+    private boolean isLandscape;
     private boolean isDialogMode;
     private int dialogWidth;
     private int dialogHeight;
@@ -91,6 +118,7 @@ public class JsonConfigParser {
     void parser(String content) throws JSONException {
         // 以下操作用getXX不用optXX防止QA修改配置文件误删除某些选项而未测到
         JSONObject jsonObject = new JSONObject(content);
+        statusBarColor = jsonObject.getInt("statusBarColor");
         navBackIcon = jsonObject.getString("navBackIcon");
         navBackIconWidth = jsonObject.getInt("navBackIconWidth");
         navBackIconHeight = jsonObject.getInt("navBackIconHeight");
@@ -98,6 +126,7 @@ public class JsonConfigParser {
         navTitle = jsonObject.getString("navTitle");
         navTitleColor = jsonObject.getInt("navTitleColor");
         isHideNav = jsonObject.getBoolean("isHideNav");
+        isHideBackIcon = jsonObject.getBoolean("isHideBackIcon");
 
         logoIconName = jsonObject.getString("logoIconName");
         logoWidth = jsonObject.getInt("logoWidth");
@@ -109,11 +138,13 @@ public class JsonConfigParser {
 
         maskNumberColor = jsonObject.getInt("maskNumberColor");
         maskNumberSize = jsonObject.getInt("maskNumberSize");
+        maskNumberDpSize = jsonObject.getInt("maskNumberDpSize");
         maskNumberTopYOffset = jsonObject.getInt("maskNumberTopYOffset");
         maskNumberBottomYOffset = jsonObject.getInt("maskNumberBottomYOffset");
         maskNumberXOffset = jsonObject.getInt("maskNumberXOffset");
 
         sloganSize = jsonObject.getInt("sloganSize");
+        sloganDpSize = jsonObject.getInt("sloganDpSize");
         sloganColor = jsonObject.getInt("sloganColor");
         sloganTopYOffset = jsonObject.getInt("sloganTopYOffset");
         sloganBottomYOffset = jsonObject.getInt("sloganBottomYOffset");
@@ -121,6 +152,7 @@ public class JsonConfigParser {
 
         loginBtnText = jsonObject.getString("loginBtnText");
         loginBtnTextSize = jsonObject.getInt("loginBtnTextSize");
+        loginBtnTextDpSize = jsonObject.getInt("loginBtnTextDpSize");
         loginBtnTextColor = jsonObject.getInt("loginBtnTextColor");
         loginBtnWidth = jsonObject.getInt("loginBtnWidth");
         loginBtnHeight = jsonObject.getInt("loginBtnHeight");
@@ -132,12 +164,16 @@ public class JsonConfigParser {
         privacyTextColor = jsonObject.getInt("privacyTextColor");
         privacyProtocolColor = jsonObject.getInt("privacyProtocolColor");
         privacySize = jsonObject.getInt("privacySize");
+        privacyDpSize = jsonObject.getInt("privacyDpSize");
         privacyTopYOffset = jsonObject.getInt("privacyTopYOffset");
         privacyBottomYOffset = jsonObject.getInt("privacyBottomYOffset");
-        privacyXOffset = jsonObject.getInt("privacyXOffset");
+        privacyMarginLeft = jsonObject.getInt("privacyMarginLeft");
+        privacyMarginRight = jsonObject.getInt("privacyMarginRight");
         privacyState = jsonObject.getBoolean("privacyState");
+        isHidePrivacySmh = jsonObject.getBoolean("isHidePrivacySmh");
         isHidePrivacyCheckBox = jsonObject.getBoolean("isHidePrivacyCheckBox");
         isPrivacyTextGravityCenter = jsonObject.getBoolean("isPrivacyTextGravityCenter");
+        checkBoxGravity = jsonObject.getInt("checkBoxGravity");
         checkedImageName = jsonObject.getString("checkedImageName");
         unCheckedImageName = jsonObject.getString("unCheckedImageName");
         privacyTextStart = jsonObject.getString("privacyTextStart");
@@ -148,9 +184,28 @@ public class JsonConfigParser {
         privacyTextEnd = jsonObject.getString("privacyTextEnd");
 
         protocolNavTitle = jsonObject.getString("protocolNavTitle");
+        cmProtocolNavTitle = jsonObject.getString("cmProtocolNavTitle");
+        ctProtocolNavTitle = jsonObject.getString("ctProtocolNavTitle");
+        cuProtocolNavTitle = jsonObject.getString("cuProtocolNavTitle");
+        customProtocolNavTitle = jsonObject.getString("customProtocolNavTitle");
+        customProtocol2NavTitle = jsonObject.getString("customProtocol2NavTitle");
         protocolNavBackIcon = jsonObject.getString("protocolNavBackIcon");
+        protocolNavHeight = jsonObject.getInt("protocolNavHeight");
+        protocolNavTitleSize = jsonObject.getInt("protocolNavTitleSize");
+        protocolNavTitleColor = jsonObject.getInt("protocolNavTitleColor");
+        protocolNavTitleDpSize = jsonObject.getInt("protocolNavTitleDpSize");
+        protocolNavBackIconWidth = jsonObject.getInt("protocolNavBackIconWidth");
+        protocolNavBackIconHeight = jsonObject.getInt("protocolNavBackIconHeight");
+
+
         protocolNavColor = jsonObject.getInt("protocolNavColor");
 
+        backgroundImage = jsonObject.getString("backgroundImage");
+        backgroundGif = jsonObject.getString("backgroundGif");
+        backgroundVideo = jsonObject.getString("backgroundVideo");
+        backgroundVideoImage = jsonObject.getString("backgroundVideoImage");
+
+        isLandscape = jsonObject.getBoolean("isLandscape");
         isDialogMode = jsonObject.getBoolean("isDialogMode");
         dialogWidth = jsonObject.getInt("dialogWidth");
         dialogHeight = jsonObject.getInt("dialogHeight");
@@ -202,6 +257,7 @@ public class JsonConfigParser {
 
     private UnifyUiConfig buildUiConfig(final Context context) {
         UnifyUiConfig.Builder builder = new UnifyUiConfig.Builder()
+                .setStatusBarColor(statusBarColor)
                 .setNavigationIcon(navBackIcon)
                 .setNavigationBackIconWidth(navBackIconWidth)
                 .setNavigationBackIconHeight(navBackIconHeight)
@@ -209,6 +265,7 @@ public class JsonConfigParser {
                 .setNavigationTitle(navTitle)
                 .setNavigationTitleColor(navTitleColor)
                 .setHideNavigation(isHideNav)
+                .setHideNavigationBackIcon(isHideBackIcon)
 
                 .setLogoIconName(logoIconName)
                 .setLogoWidth(logoWidth)
@@ -219,12 +276,14 @@ public class JsonConfigParser {
                 .setHideLogo(isHideLogo)
 
                 .setMaskNumberSize(maskNumberSize)
+                .setMaskNumberDpSize(maskNumberDpSize)
                 .setMaskNumberColor(maskNumberColor)
                 .setMaskNumberXOffset(maskNumberXOffset)
                 .setMaskNumberTopYOffset(maskNumberTopYOffset)
                 .setMaskNumberBottomYOffset(maskNumberBottomYOffset)
 
                 .setSloganSize(sloganSize)
+                .setSloganDpSize(sloganDpSize)
                 .setSloganColor(sloganColor)
                 .setSloganTopYOffset(sloganTopYOffset)
                 .setSloganXOffset(sloganXOffset)
@@ -234,6 +293,7 @@ public class JsonConfigParser {
                 .setLoginBtnBackgroundRes(loginBtnBackgroundRes)
                 .setLoginBtnTextColor(loginBtnTextColor)
                 .setLoginBtnTextSize(loginBtnTextSize)
+                .setLoginBtnTextDpSize(loginBtnTextDpSize)
                 .setLoginBtnHeight(loginBtnHeight)
                 .setLoginBtnWidth(loginBtnWidth)
                 .setLoginBtnTopYOffset(loginBtnTopYOffset)
@@ -243,12 +303,16 @@ public class JsonConfigParser {
                 .setPrivacyTextColor(privacyTextColor)
                 .setPrivacyProtocolColor(privacyProtocolColor)
                 .setPrivacySize(privacySize)
+                .setPrivacyDpSize(privacyDpSize)
                 .setPrivacyTopYOffset(privacyTopYOffset)
                 .setPrivacyBottomYOffset(privacyBottomYOffset)
-                .setPrivacyXOffset(privacyXOffset)
+                .setPrivacyMarginLeft(privacyMarginLeft)
+                .setPrivacyMarginRight(privacyMarginRight)
                 .setPrivacyState(privacyState)
+                .setHidePrivacySmh(isHidePrivacySmh)
                 .setHidePrivacyCheckBox(isHidePrivacyCheckBox)
                 .setPrivacyTextGravityCenter(isPrivacyTextGravityCenter)
+                .setCheckBoxGravity(checkBoxGravity)
                 .setCheckedImageName(checkedImageName)
                 .setUnCheckedImageName(unCheckedImageName)
                 .setPrivacyTextStart(privacyTextStart)
@@ -258,9 +322,24 @@ public class JsonConfigParser {
                 .setProtocol2Link(protocol2Link)
                 .setPrivacyTextEnd(privacyTextEnd)
 
+                .setBackgroundImage(backgroundImage)
+                .setBackgroundVideo(backgroundVideo, backgroundVideoImage)
+                .setBackgroundGif(backgroundGif)
+//                .setBackgroundVideo("android.resource://" + context.getPackageName() + "/" + , backgroundVideoImage)
+
                 .setProtocolPageNavTitle(protocolNavTitle)
+//                .setProtocolPageNavTitle(cmProtocolNavTitle, cuProtocolNavTitle, ctProtocolNavTitle)
+                .setProtocolPageNavTitle(cmProtocolNavTitle, cuProtocolNavTitle, ctProtocolNavTitle, customProtocolNavTitle, customProtocol2NavTitle)
+                .setProtocolPageNavTitleColor(protocolNavTitleColor)
                 .setProtocolPageNavBackIcon(protocolNavBackIcon)
                 .setProtocolPageNavColor(protocolNavColor)
+                .setProtocolPageNavHeight(protocolNavHeight)
+                .setProtocolPageNavTitleSize(protocolNavTitleSize)
+                .setProtocolPageNavTitleDpSize(protocolNavTitleDpSize)
+                .setProtocolPageNavBackIconWidth(protocolNavBackIconWidth)
+                .setProtocolPageNavBackIconHeight(protocolNavBackIconHeight)
+
+                .setLandscape(isLandscape)
                 .setDialogMode(isDialogMode, dialogWidth, dialogHeight, dialogX, dialogY, isBottomDialog);
         return builder.build(context);
     }

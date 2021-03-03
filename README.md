@@ -19,7 +19,7 @@
 | 产品流程图  | [交互时序图](http://support.dun.163.com/documents/287305921855672320?docId=288803165532508160&locale=zh-cn) |
 | SDK资源包   | [去下载](http://support.dun.163.com/documents/287305921855672320?docId=289905327964606464&locale=zh-cn)     |
 | 常见问题    | [常见问题](http://support.dun.163.com/documents/287305921855672320?docId=320640624725512192&locale=zh-cn)   |
-| SDK当前版本 | 2.2.3          |
+| SDK当前版本 | 3.0.2          |
 
 
 
@@ -40,9 +40,9 @@
 ```
 dependencies {
     implementation(name: 'quicklogin-external-release', ext: 'aar') // aar包具体名称请以官网下载下来为准
-    implementation(name: 'CMCCSSOSDK-release', ext: 'aar')
-    implementation(name: 'Ui-factory_oauth_mobile_3.8.3', ext: 'aar')
-    implementation(name: 'CTAccount_sdk_api_v3.7.0_all', ext: 'aar')
+    implementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
+    implementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
+    implementation(name: 'CTAccount_sdk_api_v3.8.3_all_wy', ext: 'aar')
     implementation(name: 'base-sdk-libary-release', ext: 'aar')
     implementation 'com.google.code.gson:gson:2.8.5'    // 配置对gson的依赖
 }
@@ -188,6 +188,7 @@ public void setFetchNumberTimeout(int timeout)    // 设置取号超时时间，
 public void setPreCheckUrl(String url) // 设置预取url接口，一般无需设置，当开发者希望接管preCheck逻辑时可设置代理preCheck Url，具体规则请查看易盾一键登录后端接入说明文档
 public void setExtendData(JSONObject extendData) // 设置扩展数据，一般无需设置
 public boolean onExtendMsg(JSONObject extendMsg) // 当用户自定义预取Url后，如果在自己业务后端判断调用非法，可直接调用该接口返回false实现快速降级，以及获取自己业务后端处理后返回的数据
+public void setPrivacyState(boolean isChecked) //api自动设置协议复选框的选中状态
 public void quitActivity() // 退出一键登录页面
 
 ```
@@ -469,7 +470,7 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | setPrivacyDpSize(int privacyDpSize)                          | 设置隐私栏区域字体大小，单位dp                               |
 | setPrivacyTopYOffset(int privacyTopYOffset)                  | 设置隐私栏顶部Y轴偏移，单位dp                                |
 | setPrivacyBottomYOffset(int privacyBottomYOffset)            | 设置隐私栏距离屏幕底部偏移，单位dp                           |
-| setPrivacyXOffset(int privacyXOffset)                        | 设置隐私栏水平方向的偏移，单位dp                             |
+| setPrivacyMarginLeft(int privacyMarginLeft)                        | 设置隐私栏水平方向的偏移，单位dp                             |
 | setPrivacyMarginRight(int privacyMarginRight)                | 设置隐私栏右侧边距，单位dp                                   |
 | setPrivacyState(boolean privacyState)                        | 设置隐私栏协议复选框勾选状态，true勾选，false不勾选          |
 | setHidePrivacyCheckBox(boolean hidePrivacyCheckBox)          | 设置是否隐藏隐私栏勾选框                                     |

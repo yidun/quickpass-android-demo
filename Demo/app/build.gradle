@@ -59,12 +59,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/commons.jar')
-
     externalImplementation(name: 'quicklogin_libary-external-release', ext: 'aar')
-    externalImplementation(name: 'CMCCSSOSDK-release-5.6.6.1', ext: 'aar')
-    externalImplementation(name: 'Ui-factory_oauth_mobile_3.8.3.1', ext: 'aar')
+    externalImplementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
+    externalImplementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
 
-    implementation(name: 'CTAccount_sdk_api_v3.7.0_all', ext: 'aar')
+    implementation(name: 'CTAccount_sdk_api_v3.8.3_all_wy', ext: 'aar')
+    implementation(name: 'base-sdk-libary-release', ext: 'aar')
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.okhttp3:okhttp:3.3.1'
 
