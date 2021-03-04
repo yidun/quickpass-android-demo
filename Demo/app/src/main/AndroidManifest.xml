@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.cmic.sso.sdk.activity.LoginAuthActivity"
+            android:name="com.cmic.sso.wy.activity.LoginAuthActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="behind"
