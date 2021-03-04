@@ -26,6 +26,12 @@
             android:screenOrientation="behind"
             android:theme="@style/Theme.ActivityDialogStyle"
             tools:replace="android:screenOrientation,android:configChanges" />
+        <activity
+            android:name="com.netease.nis.quicklogin.ui.YDQuickLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.ActivityDialogStyle" />
     </application>
 
 
