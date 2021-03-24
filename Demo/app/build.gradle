@@ -59,7 +59,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/commons.jar')
-    externalImplementation(name: 'quicklogin_libary-external-release', ext: 'aar')
+    externalImplementation(name: 'quicklogin_libary-external-release-3.0.3', ext: 'aar')
     externalImplementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
     externalImplementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
 
