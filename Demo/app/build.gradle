@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 27
+    compileSdkVersion 30
     defaultConfig {
         applicationId "nis.netease.com.quickpassdemo"
-        minSdkVersion 17
-        targetSdkVersion 27
+        minSdkVersion 16
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -62,10 +62,12 @@ dependencies {
     externalImplementation(name: 'quicklogin_libary-external-release-3.0.3', ext: 'aar')
     externalImplementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
     externalImplementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
+    internalImplementation(name: 'Ui-factory_oauth_mobile_4.0.2', ext: 'aar')
+    internalImplementation(name: 'quicklogin_libary-internal-release-1.5.0.2', ext: 'aar')
 
     implementation(name: 'CTAccount_sdk_api_v3.8.3_all_wy', ext: 'aar')
     implementation(name: 'base-sdk-libary-release', ext: 'aar')
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:4.6.0'
 
 }

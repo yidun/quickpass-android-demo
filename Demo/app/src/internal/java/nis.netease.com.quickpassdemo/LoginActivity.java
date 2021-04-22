@@ -56,14 +56,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initArgs() {
         if (isTest) {
-            // BUSINESS_ID = "35d60d532b4f4c4c84f3e243c1989a27"; //本机校验
             BUSINESS_ID = "xxx"; // 一键登录
             mSecretKey = "xxx";
             mSecretId = "xxx";
             mVerifyUrl = "url";
             mOnePassUrl = "url";
         } else {
-            // BUSINESS_ID = "1412f24fcadc4f1e9b11590221a3e4eb";/ / 本机校验
             BUSINESS_ID = "xxx"; // 一键登录
             mSecretKey = "xxx";
             mSecretId = "xxx";
