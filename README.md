@@ -19,7 +19,7 @@
 | 产品流程图  | [交互时序图](http://support.dun.163.com/documents/287305921855672320?docId=288803165532508160&locale=zh-cn) |
 | SDK资源包   | [去下载](http://support.dun.163.com/documents/287305921855672320?docId=289905327964606464&locale=zh-cn)     |
 | 常见问题    | [常见问题](http://support.dun.163.com/documents/287305921855672320?docId=320640624725512192&locale=zh-cn)   |
-| SDK当前版本 | 3.0.3          |
+| SDK当前版本 | 3.0.4          |
 
 
 
