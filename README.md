@@ -34,6 +34,7 @@
 ## 2 SDK集成
 ### 2.1 从3.0.4版本开始，提供远程依赖的方式，下面本地依赖的方式逐步淘汰。原先以本地依赖集成的想尝试远程依赖请先去除干净本地包，避免重复依赖冲突
 ```
+远程包托管在MavenCentral，需要在跟build.gradle添加MavenCentral
 implementation 'io.github.yidun:quicklogin:3.0.4'
 ```
 ### 2.2 添加aar包依赖
