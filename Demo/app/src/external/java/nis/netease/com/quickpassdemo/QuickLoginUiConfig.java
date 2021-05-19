@@ -3,6 +3,7 @@ package nis.netease.com.quickpassdemo;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,6 +82,7 @@ public class QuickLoginUiConfig {
                 //手机掩码
                 .setMaskNumberColor(Color.RED)
                 .setMaskNumberSize(15)
+                .setMaskNumberTypeface(Typeface.SERIF)
                 .setMaskNumberXOffset(X_OFFSET)
                 .setMaskNumberTopYOffset(120)
                 .setMaskNumberBottomYOffset(BOTTOM_OFFSET)
@@ -110,12 +112,15 @@ public class QuickLoginUiConfig {
                 .setPrivacyTextColor(Color.RED)
                 .setPrivacyProtocolColor(Color.GREEN)
 //                .setHidePrivacyCheckBox(false)
+                .setPrivacyTextMarginLeft(6)
                 .setPrivacyMarginLeft(X_OFFSET)
                 .setPrivacyState(true)
                 .setPrivacySize(12)
 //                .setPrivacyTopYOffset(510)
                 .setPrivacyBottomYOffset(20)
                 .setPrivacyTextGravityCenter(true)
+                .setPrivacyCheckBoxWidth(15)
+                .setPrivacyCheckBoxHeight(15)
                 .setCheckedImageName("yd_checkbox_checked2")
                 .setUnCheckedImageName("yd_checkbox_unchecked2")
                 // 协议详情页导航栏
