@@ -19,7 +19,7 @@
 | 产品流程图  | [交互时序图](http://support.dun.163.com/documents/287305921855672320?docId=288803165532508160&locale=zh-cn) |
 | SDK资源包   | [去下载](http://support.dun.163.com/documents/287305921855672320?docId=289905327964606464&locale=zh-cn)     |
 | 常见问题    | [常见问题](http://support.dun.163.com/documents/287305921855672320?docId=320640624725512192&locale=zh-cn)   |
-| SDK当前版本 | 3.0.4          |
+| SDK当前版本 | 3.0.5          |
 
 
 
@@ -53,7 +53,7 @@
 ```
 在对应module的gradle 中添加依赖
 ```
-implementation 'io.github.yidun:quicklogin:3.0.4'
+implementation 'io.github.yidun:quicklogin:3.0.5'
 ```
 ### 2.2 添加aar包依赖
 将从官网下载下来的一键登录aar包放到项目的libs目录下，然后在模块的build.gradle中的dependencies添加相关依赖
@@ -451,8 +451,9 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | :----------------------------------------------------------- | ------------------------------------------------------------ |
 | setMaskNumberColor(int maskNumberColor)                      | 设置手机掩码颜色                                             |
 | setMaskNumberSize(int maskNumberSize)                        | 设置手机掩码字体大小，单位sp                                 |
+| setMaskNumberXOffset(int maskNumberXOffset)                  | 设置手机掩码水平方向的偏移，单位dp                           |
 | setMaskNumberDpSize(int maskNumberDpSize)                    | 设置手机掩码字体大小，单位dp                                 |
-| setMaskNumberTopYOffset(int maskNumberTopYOffset)            | 设置手机掩码顶部Y轴偏移，单位dp                              |
+| setMaskNumberTypeface(Typeface tf)                           | 设置手机掩码字体                                           |
 | setMaskNumberBottomYOffset(int maskNumberBottomYOffset)      | 设置手机掩码距离屏幕底部偏移，单位dp                         |
 | setMaskNumberXOffset(int maskNumberXOffset)                  | 设置手机掩码水平方向的偏移，单位dp                           |
 | setMaskNumberListener(MaskNumberListener maskNumberListener) | 设置手机掩码自定义监听器，用于对手机掩码栏实现自定义功能（可参见Demo示例工程） |
@@ -493,12 +494,15 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | setPrivacyDpSize(int privacyDpSize)                          | 设置隐私栏区域字体大小，单位dp                               |
 | setPrivacyTopYOffset(int privacyTopYOffset)                  | 设置隐私栏顶部Y轴偏移，单位dp                                |
 | setPrivacyBottomYOffset(int privacyBottomYOffset)            | 设置隐私栏距离屏幕底部偏移，单位dp                           |
-| setPrivacyMarginLeft(int privacyMarginLeft)                        | 设置隐私栏水平方向的偏移，单位dp                             |
+| setPrivacyTextMarginLeft(int privacyTextMarginLeft)          | 设置隐私栏复选框和文字内边距，单位dp                             |
+| setPrivacyMarginLeft(int privacyMarginLeft)                  | 设置隐私栏水平方向的偏移，单位dp                             |
 | setPrivacyMarginRight(int privacyMarginRight)                | 设置隐私栏右侧边距，单位dp                                   |
 | setPrivacyState(boolean privacyState)                        | 设置隐私栏协议复选框勾选状态，true勾选，false不勾选          |
 | setHidePrivacyCheckBox(boolean hidePrivacyCheckBox)          | 设置是否隐藏隐私栏勾选框                                     |
 | setCheckBoxGravity(int checkBoxGravity)                      | 设置隐私栏勾选框与文本协议对齐方式，可选择顶部（Gravity.TOP），居中（Gravity.CENTER），底部（Gravity.BOTTOM）等 |
 | setPrivacyTextGravityCenter(boolean privacyTextGravityCenter | 设置隐私栏文案换行后是否居中对齐，如果为true则居中对齐，否则左对齐 |
+| setPrivacyCheckBoxWidth(int privacyCheckBoxWidth)            | 设置隐私栏复选框宽度，单位dp   |
+| setPrivacyCheckBoxHeight(int privacyCheckBoxHeight)          | 设置隐私栏复选框高度，单位dp   |
 | setCheckedImageName(String checkedImageName)                 | 设置隐私栏复选框选中时的图片资源，该图片资源需要放到drawable目录下 |
 | setUnCheckedImageName(String unCheckedImageName)             | 设置隐私栏复选框未选中时的图片资源，该图片资源需要放到drawable目录下 |
 | setPrivacyTextStart(String privacyTextStart)                 | 设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
