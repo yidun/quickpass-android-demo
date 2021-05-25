@@ -63,9 +63,9 @@ implementation 'io.github.yidun:quicklogin:3.0.5'
 
 ```
 dependencies {
-    implementation(name: 'quicklogin-external-release', ext: 'aar') // aar包具体名称请以官网下载下来为准
+    implementation(name: 'quicklogin-external-release-3.0.4', ext: 'aar') // aar包具体名称请以官网下载下来为准
     implementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
-    implementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
+    implementation(name: 'Ui-factory_oauth_mobile_4.0.3', ext: 'aar')
     implementation(name: 'CTAccount_sdk_api_v3.8.3_all_wy', ext: 'aar')
     implementation(name: 'base-sdk-libary-release', ext: 'aar')
     implementation 'com.google.code.gson:gson:2.8.5'    // 配置对gson的依赖
