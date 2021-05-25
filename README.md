@@ -32,8 +32,9 @@
 
 
 ## 2 SDK集成
-### 2.1 从3.0.4版本开始，提供远程依赖的方式，本地依赖的方式逐步淘汰。原先以本地依赖集成的想尝试远程依赖请先去除干净本地包，避免重复依赖冲突
-确认androidstudio的Project根目录的主gradle中配置了 mavenCentral 支持
+### 方式一
+#### 从3.0.4版本开始，提供远程依赖的方式，本地依赖的方式逐步淘汰。原先以本地依赖集成的想尝试远程依赖请先去除干净本地包，避免重复依赖冲突
+确认Android Studio的Project根目录的主gradle中配置了 mavenCentral 支持
 
 ```
  buildscript {
@@ -55,7 +56,7 @@
 ```
 implementation 'io.github.yidun:quicklogin:3.0.5'
 ```
-### 2.2 添加aar包依赖
+### 方式二
 将从官网下载下来的一键登录aar包放到项目的libs目录下，然后在模块的build.gradle中的dependencies添加相关依赖
 
 示例：
