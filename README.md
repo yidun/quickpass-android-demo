@@ -19,7 +19,7 @@
 | 产品流程图  | [交互时序图](http://support.dun.163.com/documents/287305921855672320?docId=288803165532508160&locale=zh-cn) |
 | SDK资源包   | [去下载](http://support.dun.163.com/documents/287305921855672320?docId=289905327964606464&locale=zh-cn)     |
 | 常见问题    | [常见问题](http://support.dun.163.com/documents/287305921855672320?docId=320640624725512192&locale=zh-cn)   |
-| SDK当前版本 | 3.0.6          |
+| SDK当前版本 | 3.0.6.2          |
 
 
 
@@ -54,7 +54,7 @@
 ```
 在对应module的gradle 中添加依赖
 ```
-implementation 'io.github.yidun:quicklogin:3.0.6'
+implementation 'io.github.yidun:quicklogin:3.0.6.2'
 ```
 **<font color = red>NOTE：为了解决外抛onActivityResult，从3.0.6开始移动原先的类LoginAuthActivity中转到CmccLoginActivity。如是之前为了Activity的样式覆盖过theme，现在请覆盖CmccLoginActivity</font>**
 ```
