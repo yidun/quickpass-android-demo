@@ -19,7 +19,7 @@
 | 产品流程图  | [交互时序图](http://support.dun.163.com/documents/287305921855672320?docId=288803165532508160&locale=zh-cn) |
 | SDK资源包   | [去下载](http://support.dun.163.com/documents/287305921855672320?docId=289905327964606464&locale=zh-cn)     |
 | 常见问题    | [常见问题](http://support.dun.163.com/documents/287305921855672320?docId=320640624725512192&locale=zh-cn)   |
-| SDK当前版本 | 3.0.6.2          |
+| SDK当前版本 | 3.0.6.5          |
 
 
 
@@ -54,7 +54,7 @@
 ```
 在对应module的gradle 中添加依赖
 ```
-implementation 'io.github.yidun:quicklogin:3.0.6.2'
+implementation 'io.github.yidun:quicklogin:3.0.6.5'
 ```
 **<font color = red>NOTE：为了解决外抛onActivityResult，从3.0.6开始移动原先的类LoginAuthActivity中转到CmccLoginActivity。如是之前为了Activity的样式覆盖过theme，现在请覆盖CmccLoginActivity</font>**
 ```
@@ -521,6 +521,8 @@ QuickLogin.getInstance(getApplicationContext(),onePassId).setUnifyUiConfig(Quick
 | setCheckedImageName(String checkedImageName)                 | 设置隐私栏复选框选中时的图片资源，该图片资源需要放到drawable目录下 |
 | setUnCheckedImageName(String unCheckedImageName)             | 设置隐私栏复选框未选中时的图片资源，该图片资源需要放到drawable目录下 |
 | setPrivacyTextStart(String privacyTextStart)                 | 设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
+| setPrivacyTextStartSize(float spVal)                         | 设置隐私开始字体大小                                         |
+| setPrivacyLineSpacing(float add,float mult)                  | 设置隐私行间距       add行间距 mult倍数                       |
 | setProtocolText(String protocolText)                         | 设置隐私栏协议文本                                           |
 | setProtocolLink(String protocolLink)                         | 设置隐私栏协议链接                                           |
 | setProtocol2Text(String protocol2Text)                       | 设置隐私栏协议2文本                                          |
