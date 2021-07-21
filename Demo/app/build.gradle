@@ -59,7 +59,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     externalImplementation 'io.github.yidun:quicklogin:3.0.7'
-    internalImplementation 'io.github.yidun:onePass:1.5.1'
+    internalImplementation 'io.github.yidun:onePass:1.5.2'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 
