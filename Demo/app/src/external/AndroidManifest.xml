@@ -20,18 +20,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 移动登录类名 -->
-        <activity
-            android:name="com.cmic.sso.wy.activity.LoginAuthActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind"
-            tools:replace="android:screenOrientation,android:configChanges" />
-        <activity
-            android:name="com.netease.nis.quicklogin.ui.YDQuickLoginActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind" />
+        </activity>
     </application>
 
 </manifest>
