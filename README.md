@@ -54,7 +54,7 @@
 ```
 在对应module的gradle 中添加依赖
 ```
-implementation 'io.github.yidun:quicklogin:3.0.7'
+implementation 'io.github.yidun:quicklogin:3.0.8'
 ```
 **<font color = red>NOTE：为了解决外抛onActivityResult，从3.0.6开始移动原先的类LoginAuthActivity中转到CmccLoginActivity。如是之前为了Activity的样式覆盖过theme，现在请覆盖CmccLoginActivity</font>**
 ```
