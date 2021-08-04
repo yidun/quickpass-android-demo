@@ -308,6 +308,7 @@ public interface QuickLoginTokenListener {
 
      /**
      * 取消一键登录
+     * 包括物理返回键的取消
      */
     void onCancelGetToken();
 }
