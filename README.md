@@ -308,7 +308,6 @@ public interface QuickLoginTokenListener {
 
      /**
      * 取消一键登录
-     * 包括物理返回键的取消
      */
     void onCancelGetToken();
 }
@@ -356,142 +355,142 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 - 以下所有 API 接口中如果涉及到顶部偏移和底部偏移的接口，顶部都是相对导航栏底部而言，底部都是相对屏幕底部而言
 
 ##### 状态栏
-| 方法                                              | 说明                                   |
-| ------------------------------------------------- | -------------------------------------- |
-| setStatusBarColor(int statusBarColor)             | 设置状态栏背景颜色                         |
-| setStatusBarDarkColor(boolean statusBarDarkColor) | 设置状态栏字体图标颜色是否为暗色(黑色) |
+| 方法                   | 参数                       | 说明 |
+| ----------------------| -------------------------- |--------------------------------|
+| setStatusBarColor     | statusBarColor:int         |设置状态栏背景颜色                 |
+| setStatusBarDarkColor | statusBarDarkColor:boolean |设置状态栏字体图标颜色是否为暗色(黑色)|
 
 ##### 导航栏
 
-| 方法                                              | 说明                                                         |
-| :------------------------------------------------ | ------------------------------------------------------------ |
-| setNavigationIcon(String backIcon)                | 设置导航栏返回按钮图标，backIcon 导航栏图标名称 |
-| setNavigationIconDrawable(Drawable navBackIconDrawable)                | 设置导航栏返回按钮图标 Drawable 值 |
-| setNavigationBackIconWidth(int backIconWidth)     | 设置导航栏返回图标的宽度，单位 dp                                     |
-| setNavigationBackIconHeight(int backIconHeight)   | 设置导航栏返回图标的高度，单位 dp                                     |
-| setHideNavigationBackIcon(boolean isHideBackIcon) | 设置是否隐藏导航栏返回按钮                                       |
-| setNavigationBackgroundColor(int backgroundColor) | 设置导航栏背景颜色                                           |
-| setNavigationHeight(int navHeight)                | 设置导航栏高度，单位 dp                                       |
-| setNavigationTitle(String title)                  | 设置导航栏标题                                               |
-| setNavigationTitleColor(int titleColor)           | 设置导航栏标题颜色                                           |
-| setNavTitleSize(int navTitleSize)                 | 设置导航栏标题大小，单位 sp                                   |
-| setNavTitleDpSize(int navTitleDpSize)             | 设置导航栏标题大小，单位 dp                                   |
-| setNavTitleBold(boolean navTitleBold)             | 设置导航栏标题是否为粗体                                     |
-| setHideNavigation(boolean isHideNavigation)       | 设置是否隐藏导航栏                                           |
+| 方法                          | 参数        | 说明                                                     |
+| :----------------------------| -----------------------------|----------------------------------------|
+| setNavigationIcon            | backIcon:String              | 设置导航栏返回按钮图标，backIcon 导航栏图标名称 |
+| setNavigationIconDrawable    | navBackIconDrawable:Drawable | 设置导航栏返回按钮图标 Drawable 值           |
+| setNavigationBackIconWidth   | backIconWidth:int            | 设置导航栏返回图标的宽度，单位 dp             |
+| setNavigationBackIconHeight  | backIconHeight:int           | 设置导航栏返回图标的高度，单位 dp              |
+| setHideNavigationBackIcon    | isHideBackIcon:boolean       | 设置是否隐藏导航栏返回按钮                   |
+| setNavigationBackgroundColor | backgroundColor:int          | 设置导航栏背景颜色  |
+| setNavigationHeight          | navHeight:int                | 设置导航栏高度，单位 dp    |
+| setNavigationTitle           | title:String                 | 设置导航栏标题     |
+| setNavigationTitleColor      | titleColor:int               | 设置导航栏标题颜色   |
+| setNavTitleSize              | navTitleSize:int             | 设置导航栏标题大小，单位 sp |
+| setNavTitleDpSize            | navTitleDpSize:int           | 设置导航栏标题大小，单位 dp |
+| setNavTitleBold              | navTitleBold:boolean         | 设置导航栏标题是否为粗体    |
+| setHideNavigation            | isHideNavigation:boolean     | 设置是否隐藏导航栏     |
 
 ##### 应用 Logo
 
-| 方法                                        | 说明                                                         |
-| :------------------------------------------ | ------------------------------------------------------------ |
-| setLogoIconName(String logoIconName)        | 设置应用 logo 图标，logoIconName：logo 图标名称 |
-| setLogoIconDrawable(Drawable logoIconDrawable)        | 设置应用 logo 图标 Drawable 值 |
-| setLogoWidth(int logoWidth)                 | 设置应用logo宽度，单位dp                                     |
-| setLogoHeight(int logoHeight)               | 设置应用 logo 高度，单位 dp                                     |
-| setLogoTopYOffset(int logoTopYOffset)       | 设置 logo 顶部 Y 轴偏移，单位 dp                                  |
-| setLogoBottomYOffset(int logoBottomYOffset) | 设置 logo 距离屏幕底部偏移，单位 dp                             |
-| setLogoXOffset(int logoXOffset)             | 设置 logo 水平方向的偏移，单位 dp                               |
-| setHideLogo(boolean hideLogo)               | 设置是否隐藏 logo                                             |
+| 方法                  | 参数                      | 说明                                        |
+| :--------------------| ------------------------- |-------------------------------------------|
+| setLogoIconName      | logoIconName:STring       | 设置应用 logo 图标，logoIconName：logo 图标名称 |
+| setLogoIconDrawable  | logoIconDrawable:Drawable | 设置应用 logo 图标 Drawable 值 |
+| setLogoWidth         | logoWidth:int             | 设置应用logo宽度，单位dp |
+| setLogoHeight        | logoHeight:int            | 设置应用 logo 高度，单位 dp  |
+| setLogoTopYOffset    | logoTopYOffset:int        | 设置 logo 顶部 Y 轴偏移，单位 dp |
+| setLogoBottomYOffset | logoBottomYOffset:int     | 设置 logo 距离屏幕底部偏移，单位 dp     |
+| setLogoXOffset       | logoXOffset:int           | 设置 logo 水平方向的偏移，单位 dp|
+| setHideLogo          | hideLogo:boolean          | 设置是否隐藏 logo   |
 
 ##### 手机掩码
 
-| 方法                                                         | 说明                                                         |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| setMaskNumberColor(int maskNumberColor)                      | 设置手机掩码颜色                                             |
-| setMaskNumberSize(int maskNumberSize)                        | 设置手机掩码字体大小，单位 sp                                 |
-| setMaskNumberXOffset(int maskNumberXOffset)                  | 设置手机掩码水平方向的偏移，单位 dp                           |
-| setMaskNumberDpSize(int maskNumberDpSize)                    | 设置手机掩码字体大小，单位 dp                                 |
-| setMaskNumberTypeface(Typeface tf)                           | 设置手机掩码字体                                           |
-| setMaskNumberTopYOffset(int maskNumberTopYOffset)      | 设置手机掩码顶部Y轴偏移，单位 dp                         |
-| setMaskNumberBottomYOffset(int maskNumberBottomYOffset)                  | 设置手机掩码距离屏幕底部偏移，单位 dp                           |
-| setMaskNumberListener(MaskNumberListener maskNumberListener) | 设置点击手机掩码监听器，用于对手机掩码栏实现自定义功能（可参见 Demo 示例工程） |
+| 方法                        | 参数                                  | 说明                         |
+| :--------------------------| --------------------------------------|--------------|
+| setMaskNumberColor         | maskNumberColor:int                   | 设置手机掩码颜色 |
+| setMaskNumberSize          | maskNumberSize:int                    | 设置手机掩码字体大小，单位 sp |
+| setMaskNumberXOffset       | maskNumberXOffset:int                 | 设置手机掩码水平方向的偏移，单位 dp |
+| setMaskNumberDpSize        | maskNumberDpSize:int                  | 设置手机掩码字体大小，单位 dp |
+| setMaskNumberTypeface      | tf:Typeface                           | 设置手机掩码字体 |
+| setMaskNumberTopYOffset    | maskNumberTopYOffset:int              | 设置手机掩码顶部Y轴偏移，单位 dp |
+| setMaskNumberBottomYOffset | maskNumberBottomYOffset:int           | 设置手机掩码距离屏幕底部偏移，单位 dp |
+| setMaskNumberListener      | maskNumberListener:MaskNumberListener | 设置点击手机掩码监听器，用于对手机掩码栏实现自定义功能（可参见 Demo 示例工程）|
 
 ##### 认证品牌
 
-| 方法                                            | 说明                                 |
-| :---------------------------------------------- | ------------------------------------ |
-| setSloganSize(int sloganSize)                   | 设置认证品牌字体大小，单位 sp         |
-| setSloganDpSize(int sloganDpSize)               | 设置认证品牌字体大小，单位 dp         |
-| setSloganColor(int sloganColor)                 | 设置认证品牌颜色                     |
-| setSloganTopYOffset(int sloganTopYOffset)       | 设置认证品牌顶部 Y 轴偏移，单位 dp      |
-| setSloganBottomYOffset(int sloganBottomYOffset) | 设置认证品牌距离屏幕底部偏移，单位 dp |
-| setSloganXOffset(int sloganXOffset)             | 设置认证品牌水平方向的偏移，单位 dp   |
+| 方法                    | 参数              | 说明 |
+| :--------------------- | ----------------------- |--------------------------|
+| setSloganSize          | sloganSize:int          | 设置认证品牌字体大小，单位 sp |
+| setSloganDpSize        | sloganDpSize:int        | 设置认证品牌字体大小，单位 dp |
+| setSloganColor         | sloganColor:int         | 设置认证品牌颜色 |
+| setSloganTopYOffset    | sloganTopYOffset:int    | 设置认证品牌顶部 Y 轴偏移，单位 dp |
+| setSloganBottomYOffset | sloganBottomYOffset:int | 设置认证品牌距离屏幕底部偏移，单位 dp |
+| setSloganXOffset       | sloganXOffset:int       | 设置认证品牌水平方向的偏移，单位 dp |
 
 ##### 登录按钮
 
-| 方法                                                   | 说明                                                 |
-| :----------------------------------------------------- | ---------------------------------------------------- |
-| setLoginBtnText(String loginBtnText)                   | 设置登录按钮文本                                     |
-| setLoginBtnTextSize(int loginBtnTextSize)              | 设置登录按钮文本字体大小，单位 sp                     |
-| setLoginBtnTextDpSize(int loginBtnTextDpSize)          | 设置登录按钮文本字体大小，单位 dp                     |
-| setLoginBtnTextColor(int loginBtnTextColor)            | 设置登录按钮文本颜色                                 |
-| setLoginBtnWidth(int loginBtnWidth)                    | 设置登录按钮宽度，单位 dp                             |
-| setLoginBtnHeight(int loginBtnHeight)                  | 设置登录按钮高度，单位 dp                             |
-| setLoginBtnBackgroundRes(String loginBtnBackgroundRes) | 设置登录按钮背景资源，该资源需要放置在 drawable 目录下 |
-| setLoginBtnBackgroundDrawable(Drawable loginBtnBackgroundDrawable) | 设置登录按钮背景资源 Drawable 值 |
-| setLoginBtnTopYOffset(int loginBtnTopYOffset)          | 设置登录按钮顶部Y轴偏移，单位 dp                      |
-| setLoginBtnBottomYOffset(int loginBtnBottomYOffset)    | 设置登录按钮距离屏幕底部偏移，单位 dp                 |
-| setLoginBtnXOffset(int loginBtnXOffset)                | 设置登录按钮水平方向的偏移，单位 dp                   |
+| 方法                           | 参数                               | 说明 |
+| :---------------------------- | ---------------------------------- |---|
+| setLoginBtnText               | loginBtnText:String                | 设置登录按钮文本 |
+| setLoginBtnTextSize           | loginBtnTextSize:int               | 设置登录按钮文本字体大小，单位 sp |
+| setLoginBtnTextDpSize         | loginBtnTextDpSize:int             | 设置登录按钮文本字体大小，单位 dp |
+| setLoginBtnTextColor          | loginBtnTextColor:int              | 设置登录按钮文本颜色 |
+| setLoginBtnWidth              | loginBtnWidth:int                  | 设置登录按钮宽度，单位 dp |
+| setLoginBtnHeight             | loginBtnHeight:int                 | 设置登录按钮高度，单位 dp |
+| setLoginBtnBackgroundRes      | loginBtnBackgroundRes:String       | 设置登录按钮背景资源，该资源需要放置在 drawable 目录下 |
+| setLoginBtnBackgroundDrawable | loginBtnBackgroundDrawable:Drawable| 设置登录按钮背景资源 Drawable 值 |
+| setLoginBtnTopYOffset         | loginBtnTopYOffset:int             | 设置登录按钮顶部Y轴偏移，单位 dp |
+| setLoginBtnBottomYOffset      | loginBtnBottomYOffset:int          | 设置登录按钮距离屏幕底部偏移，单位 dp |
+| setLoginBtnXOffset            | loginBtnXOffset:int                | 设置登录按钮水平方向的偏移，单位 dp |
 
 ##### 隐私协议
 
-| 方法                                                         | 说明                                                         |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| setPrivacyTextColor(int privacyTextColor)                    | 设置隐私栏文本颜色，不包括协议 ，如若隐私栏协议文案为：登录即同意《中国移动认证条款》且授权 QuickLogin 登录， 则该API对除协议‘《中国移动认证条款》’区域外的其余文本生效 |
-| setPrivacyProtocolColor(int privacyProtocolColor)            | 设置隐私栏协议颜色 。例如：登录即同意《中国移动认证条款》且授权 QuickLogin 登录 ， 则该 API 仅对‘《中国移动认证条款》’文案生效 |
-| setPrivacySize(int privacySize)                              | 设置隐私栏区域字体大小，单位 sp                               |
-| setPrivacyDpSize(int privacyDpSize)                          | 设置隐私栏区域字体大小，单位 dp                               |
-| setPrivacyTopYOffset(int privacyTopYOffset)                  | 设置隐私栏顶部Y轴偏移，单位 dp                                |
-| setPrivacyBottomYOffset(int privacyBottomYOffset)            | 设置隐私栏距离屏幕底部偏移，单位 dp                           |
-| setPrivacyTextMarginLeft(int privacyTextMarginLeft)          | 设置隐私栏复选框和文字内边距，单位 dp                             |
-| setPrivacyMarginLeft(int privacyMarginLeft)                  | 设置隐私栏水平方向的偏移，单位 dp                             |
-| setPrivacyMarginRight(int privacyMarginRight)                | 设置隐私栏右侧边距，单位 dp                                   |
-| setPrivacyState(boolean privacyState)                        | 设置隐私栏协议复选框勾选状态，true 勾选，false 不勾选          |
-| setHidePrivacyCheckBox(boolean hidePrivacyCheckBox)          | 设置是否隐藏隐私栏勾选框                                     |
-| setCheckBoxGravity(int checkBoxGravity)                      | 设置隐私栏勾选框与文本协议对齐方式，可选择顶部（Gravity.TOP），居中（Gravity.CENTER），底部（Gravity.BOTTOM）等 |
-| setPrivacyTextGravityCenter(boolean privacyTextGravityCenter | 设置隐私栏文案换行后是否居中对齐，如果为 true 则居中对齐，否则左对齐 |
-| setPrivacyCheckBoxWidth(int privacyCheckBoxWidth)            | 设置隐私栏复选框宽度，单位 dp   |
-| setPrivacyCheckBoxHeight(int privacyCheckBoxHeight)          | 设置隐私栏复选框高度，单位 dp   |
-| setCheckedImageName(String checkedImageName)                 | 设置隐私栏复选框选中时的图片资源，该图片资源需要放到 drawable 目录下 |
-| setUnCheckedImageName(String unCheckedImageName)             | 设置隐私栏复选框未选中时的图片资源，该图片资源需要放到 drawable 目录下 |
-| setPrivacyTextStart(String privacyTextStart)                 | 设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
-| setPrivacyTextStartSize(float spVal)                         | 设置隐私开始字体大小                                         |
-| setPrivacyLineSpacing(float add,float mult)                  | 设置隐私行间距       add 行间距 mult 倍数                       |
-| setProtocolText(String protocolText)                         | 设置隐私栏协议文本                                           |
-| setProtocolLink(String protocolLink)                         | 设置隐私栏协议链接                                           |
-| setProtocol2Text(String protocol2Text)                       | 设置隐私栏协议 2 文本                                          |
-| setProtocol2Link(String protocol2Link)                       | 设置隐私栏协议 2 链接                                          |
-| setPrivacyTextEnd(String privacyTextEnd)                     | 设置隐私栏声明部分尾部文案。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"且授权易盾授予本机号码" |
+| 方法                                                            | 参数                          | 说明 |
+| :-------------------------- | -------------------------------  |----------------------------------------------|
+| setPrivacyTextColor         | privacyTextColor:int             | 设置隐私栏文本颜色，不包括协议 ，如若隐私栏协议文案为：登录即同意《中国移动认证条款》且授权 QuickLogin 登录， 则该API对除协议‘《中国移动认证条款》’区域外的其余文本生效|
+| setPrivacyProtocolColor     | privacyProtocolColor:int         | 设置隐私栏协议颜色 。例如：登录即同意《中国移动认证条款》且授权 QuickLogin 登录 ， 则该 API 仅对‘《中国移动认证条款》’文案生效 |
+| setPrivacySize              | privacySize:int                  | 设置隐私栏区域字体大小，单位 sp|
+| setPrivacyDpSize            | privacyDpSize:int                | 设置隐私栏区域字体大小，单位 dp|
+| setPrivacyTopYOffset        | privacyTopYOffset:int            | 设置隐私栏顶部Y轴偏移，单位 dp |
+| setPrivacyBottomYOffset     | privacyBottomYOffset:int         | 设置隐私栏距离屏幕底部偏移，单位 dp |
+| setPrivacyTextMarginLeft    | privacyTextMarginLeft:int        | 设置隐私栏复选框和文字内边距，单位 dp  |
+| setPrivacyMarginLeft        | privacyMarginLeft:int            | 设置隐私栏水平方向的偏移，单位 dp |
+| setPrivacyMarginRight       | privacyMarginRight:int           | 设置隐私栏右侧边距，单位 dp |
+| setPrivacyState             | privacyState:boolean             | 设置隐私栏协议复选框勾选状态，true 勾选，false 不勾选 |
+| setHidePrivacyCheckBox      | hidePrivacyCheckBox:boolean      | 设置是否隐藏隐私栏勾选框  |
+| setCheckBoxGravity          | checkBoxGravity:int              | 设置隐私栏勾选框与文本协议对齐方式，可选择顶部（Gravity.TOP），居中（Gravity.CENTER），底部（Gravity.BOTTOM）等 |
+| setPrivacyTextGravityCenter | privacyTextGravityCenter:boolean | 设置隐私栏文案换行后是否居中对齐，如果为 true 则居中对齐，否则左对齐 |
+| setPrivacyCheckBoxWidth     | privacyCheckBoxWidth:int         | 设置隐私栏复选框宽度，单位 dp |
+| setPrivacyCheckBoxHeight    | privacyCheckBoxHeight:int        | 设置隐私栏复选框高度，单位 dp |
+| setCheckedImageName         | checkedImageName:String          | 设置隐私栏复选框选中时的图片资源，该图片资源需要放到 drawable 目录下 |
+| setUnCheckedImageName       | unCheckedImageName:String        | 设置隐私栏复选框未选中时的图片资源，该图片资源需要放到 drawable 目录下 |
+| setPrivacyTextStart         | privacyTextStart:String          |  设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
+| setPrivacyTextStartSize     | spVal:float                      | 设置隐私开始字体大小 |
+| setPrivacyLineSpacing       | add:float,mult:float             | 设置隐私行间距 add 行间距 mult 倍数 |
+| setProtocolText             | protocolText:String              | 设置隐私栏协议文本 |
+| setProtocolLink             | protocolLink:String              | 设置隐私栏协议链接 |
+| setProtocol2Text            | protocol2Text:String             | 设置隐私栏协议 2 文本 |
+| setProtocol2Link            | protocol2Link:String             | 设置隐私栏协议 2 链接 |
+| setPrivacyTextEnd           | privacyTextEnd:String            | 设置隐私栏声明部分尾部文案。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"且授权易盾授予本机号码" |
 
 ##### 协议详情 Web 页面导航栏
 
-| 方法                                                         | 说明                                                         |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| setProtocolPageNavTitle(String protocolNavTitle)             | 设置协议 Web 页面导航栏标题，如果需要根据不同运营商设置不同标题，可使用下面重载接口 |
-| setProtocolPageNavTitle(String cmProtocolNavTitle, String cuProtocolNavTitle, String ctProtocolNavTitle) | 设置协议 Web 页面导航栏标题，可针对不同运营商单独设置          |
-| setProtocolPageNavTitle(String cmProtocolNavTitle, String cuProtocolNavTitle,                                        String ctProtocolNavTitle, String protocolTextNavTitle, String protocol2TextNavTitle) | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
-| setProtocolPageNavTitleColor(int protocolNavTitleColor)      | 设置协议 Web 页面导航栏标题颜色                                |
-| setProtocolPageNavBackIcon(String protocolNavBackIcon)       | 设置协议 Web 页面导航栏返回图标                                |
-| setProtocolPageNavColor(int protocolNavColor)                | 设置协议Web页面导航栏颜色                                    |
-| setProtocolPageNavHeight(int protocolNavHeight)              | 设置协议 Web 页面导航栏高度                                    |
-| setProtocolPageNavTitleSize(int protocolNavTitleSize)        | 设置协议Web页面导航栏标题大小，单位 sp                        |
-| setProtocolPageNavTitleDpSize(int protocolNavTitleDpSize)    | 设置协议 Web 页面导航栏标题大小，单位 dp                        |
-| setProtocolPageNavBackIconWidth(int protocolNavBackIconWidth) | 设置协议 Web 页面导航栏返回按钮宽度，单位 dp                    |
-| setProtocolPageNavBackIconHeight(int protocolNavBackIconHeight) | 设置协议 Web 页面导航栏返回按钮高度，单位 dp                    |
+| 方法                                                         | 参数                                                   | 说明 |
+| :----------------------------------------------------------- | ------------------------------------------------------------ | --- |
+| setProtocolPageNavTitle          | protocolNavTitle:String                                                       | 设置协议 Web 页面导航栏标题，如果需要根据不同运营商设置不同标题，可使用下面重载接口 |
+| setProtocolPageNavTitle          | cmProtocolNavTitle:String,cuProtocolNavTitle:String,ctProtocolNavTitle:String | 设置协议 Web 页面导航栏标题，可针对不同运营商单独设置 |
+| setProtocolPageNavTitle          | cmProtocolNavTitle:String,cuProtocolNavTitle:String,ctProtocolNavTitle:String,protocolTextNavTitle:String,protocol2TextNavTitle:String | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
+| setProtocolPageNavTitleColor     | protocolNavTitleColor:int                    | 设置协议 Web 页面导航栏标题颜色  |
+| setProtocolPageNavBackIcon       | protocolNavBackIcon:String                   | 设置协议 Web 页面导航栏返回图标 |
+| setProtocolPageNavColor          | protocolNavColor:int                        | 设置协议Web页面导航栏颜色 |
+| setProtocolPageNavHeight         | protocolNavHeight:int                      | 设置协议 Web 页面导航栏高度 |
+| setProtocolPageNavTitleSize      | protocolNavTitleSize:int            | 设置协议Web页面导航栏标题大小，单位 sp |
+| setProtocolPageNavTitleDpSize    | protocolNavTitleDpSize:int             | 设置协议 Web 页面导航栏标题大小，单位 dp |
+| setProtocolPageNavBackIconWidth  | protocolNavBackIconWidth:int            | 设置协议 Web 页面导航栏返回按钮宽度，单位 dp |
+| setProtocolPageNavBackIconHeight | protocolNavBackIconHeight:int          | 设置协议 Web 页面导航栏返回按钮高度，单位 dp |
 
 
 ##### 其他
 
-| 方法                                                         | 说明                                                         |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| setBackgroundImage(String backgroundImage)                   | 设置登录页面背景，图片资源需放置到 drawable 目录下             |
-| setBackgroundGif(String backgroundGif)                       | 设置登录页面背景为 Gif，Gif 资源需要放置到 drawable 目录下，传入资源名称即可 |
-| setBackgroundVideo(String videoPath, String videoImage)      | 设置登录页面背景为视频，参数 videoPath 为背景 Video 文件路径:(支持本地路径如："android.resource://" + context.getPackageName() + "/" + R.raw.xxxVideo；支持网络路径如"https://xxx"(建议下载到本地后使用本地路径，网络路径由于网络环境的不可控体验不如直接加载本地视频)，参数 videoImage 为视频播放前的背景图片名字，2 个参数必须都设置 |
-| setBackgroundShadowView(View view)                           | 设置登录页面背景蒙层 View，设置的 View 将位于背景之上其它控件之下。必须配合视频背景使用 |
-| setLoginListener(LoginListener loginListener)                | 设置未同意隐私协议但点击一键登录按钮时的事件监听器，可用于自定义相关提示信息，使用示例可参看 Demo 示例工程 |
-| setClickEventListener(ClickEventListener clickEventListener) | 设置授权页面点击事件监听，包括左上角返回按钮，登录按钮，隐私协议复选框，隐私协议。当这4类元素被点击时会回调传入的ClickEventListener的onClick(int viewType, int code)接口，viewType为1时表示隐私协议，2表示复选框，3表示左上角返回按钮，4表示登录按钮。当viewType为2或4时，code字段为1则表示复选框勾选，为0则表示复选框未勾选 |
-| setActivityTranslateAnimation(String enterAnimation, String exitAnimation) | 设置授权页进场与出场动画，enterAnimation 进场动画xml无后缀文件名，exitAnimation 出场动画xml无后缀文件名，如进场动画文件名为 activity_enter_anim.xml，则进场动画参数传入“activity_enter_anim" |
-| setActivityLifecycleCallbacks(ActivityLifecycleCallbacks Callbacks)      | 设置登录页面生命周期监听回调 |
-| setActivityResultCallbacks(ActivityResultCallbacks callbacks)      | 设置登录页面 onActivityResult 回调 |
+| 方法                                                         | 参数                                                         | 说明 |
+| :----------------------------------------------------------- | ------------------------------------------------------------ |---|
+| setBackgroundImage            | backgroundImage:String | 设置登录页面背景，图片资源需放置到 drawable 目录下 |
+| setBackgroundGif              | backgroundGif:String | 设置登录页面背景为 Gif，Gif 资源需要放置到 drawable 目录下，传入资源名称即可 |
+| setBackgroundVideo            | videoPath:String, videoImage:String | 设置登录页面背景为视频，参数 videoPath 为背景 Video 文件路径:(支持本地路径如："android.resource://" + context.getPackageName() + "/" + R.raw.xxxVideo；支持网络路径如"https://xxx"(建议下载到本地后使用本地路径，网络路径由于网络环境的不可控体验不如直接加载本地视频)，参数 videoImage 为视频播放前的背景图片名字，2 个参数必须都设置 |
+| setBackgroundShadowView       | view:View  | 设置登录页面背景蒙层 View，设置的 View 将位于背景之上其它控件之下。必须配合视频背景使用 |
+| setLoginListener              | loginListener:LoginListener | 设置未同意隐私协议但点击一键登录按钮时的事件监听器，可用于自定义相关提示信息，使用示例可参看 Demo 示例工程 |
+| setClickEventListener         | clickEventListener:ClickEventListener | 设置授权页面点击事件监听，包括左上角返回按钮，登录按钮，隐私协议复选框，隐私协议。当这4类元素被点击时会回调传入的ClickEventListener的onClick(int viewType, int code)接口，viewType为1时表示隐私协议，2表示复选框，3表示左上角返回按钮，4表示登录按钮。当viewType为2或4时，code字段为1则表示复选框勾选，为0则表示复选框未勾选 |
+| setActivityTranslateAnimation | enterAnimation:String,exitAnimation:String | 设置授权页进场与出场动画，enterAnimation 进场动画xml无后缀文件名，exitAnimation 出场动画xml无后缀文件名，如进场动画文件名为 activity_enter_anim.xml，则进场动画参数传入“activity_enter_anim" |
+| setActivityLifecycleCallbacks | Callbacks:ActivityLifecycleCallbacks | 设置登录页面生命周期监听回调 |
+| setActivityResultCallbacks    | callbacks:ActivityResultCallbacks | 设置登录页面 onActivityResult 回调 |
 
 ##### 弹窗模式
 
