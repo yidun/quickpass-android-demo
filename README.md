@@ -466,8 +466,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | 方法                              | 参数                                                         | 说明 |
 | :------------------------------- | ------------------------------ | ---------------------------------- |
 | setProtocolPageNavTitle          | protocolNavTitle:String                                                       | 设置协议 Web 页面导航栏标题，如果需要根据不同运营商设置不同标题，可使用下面重载接口 |
-| setProtocolPageNavTitle          | cmProtocolNavTitle:String,cuProtocolNavTitle:String,ctProtocolNavTitle:String | 设置协议 Web 页面导航栏标题，可针对不同运营商单独设置 |
-| setProtocolPageNavTitle          | cmProtocolNavTitle:String,cuProtocolNavTitle:String,ctProtocolNavTitle:String,protocolTextNavTitle:String,protocol2TextNavTitle:String | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
+| setProtocolPageNavTitle          |  | 设置协议 Web 页面导航栏标题，可针对不同运营商单独设置 |
+| setProtocolPageNavTitle          |  | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
 | setProtocolPageNavTitleColor     | protocolNavTitleColor:int                    | 设置协议 Web 页面导航栏标题颜色  |
 | setProtocolPageNavBackIcon       | protocolNavBackIcon:String                   | 设置协议 Web 页面导航栏返回图标 |
 | setProtocolPageNavColor          | protocolNavColor:int                        | 设置协议Web页面导航栏颜色 |
