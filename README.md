@@ -514,33 +514,8 @@ setDialogMode(boolean isDialogMode, int dialogWidth, int dialogHeight, int dialo
 
 注意：只有全面屏不透明的 Activity 才能指定方向，否则在 8.0 系统版本上会报"only fullscreen opaque activities can request orientation"异常
 
-3.0.6 版本之前
 ```
-<!--移动登录类名-->
-<activity
-    android:name="com.cmic.sso.wy.activity.LoginAuthActivity"
-    android:screenOrientation="landscape"
-    tools:replace="android:screenOrientation" />
-<!--电信联通登录类名-->
-<activity
-    android:name="com.netease.nis.quicklogin.ui.YDQuickLoginActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:launchMode="singleTop"
-    android:screenOrientation="landscape"
-    />
-```
-3.0.6 版本之后
-```
-<activity
-    android:name="com.netease.nis.quicklogin.ui.CmccLoginActivity"
-    android:screenOrientation="landscape"
-    tools:replace="android:screenOrientation" />
-<!--电信联通登录类名-->
-<activity
-    android:name="com.netease.nis.quicklogin.ui.YDQuickLoginActivity"
-    android:screenOrientation="landscape"
-    tools:replace="android:screenOrientation"
-    />
+setLandscape(true)
 ```
 
 ##### 全面屏(背景延伸到状态栏)
