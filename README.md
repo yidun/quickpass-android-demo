@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.0.9'
+implementation 'io.github.yidun:quicklogin:3.1.1'
 ```
 ### 本地手动依赖
 
@@ -357,8 +357,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 ##### 状态栏
 | 方法                   | 参数                       | 说明 |
 | ----------------------| -------------------------- |--------------------------------|
-| setStatusBarColor     | statusBarColor:int         |设置状态栏背景颜色                 |
-| setStatusBarDarkColor | statusBarDarkColor:boolean |设置状态栏字体图标颜色是否为暗色(黑色)|
+| setStatusBarColor     | statusBarColor:int         |设置状态栏背景颜色，Android 5.0 及以上生效|
+| setStatusBarDarkColor | statusBarDarkColor:boolean |设置状态栏字体图标颜色是否为暗色(黑色)，暗色 Android6.0 及以上生效|
 
 ##### 导航栏
 
