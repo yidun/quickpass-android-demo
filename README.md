@@ -233,7 +233,7 @@ QuickLogin quickLogin = QuickLogin.getInstance(Context context, String businessI
 - 用户处于未授权状态时，调用该方法
 - 已授权的用户退出当前帐号时，调用该方法
 - 在执行拉取授权页的方法之前，提前调用此方法，以提升用户前端体验
-- <font color=red>此方法需要 1~2s 的时间取得临时凭证，不要和拉取授权页方法一起串行调用。建议放在启动页的 onCreate() 方法中或者 Application 的 onCreate() 方法中去调用</font>
+- <font color=red> 此方法需要 1~2s 的时间取得临时凭证，不要和拉取授权页方法一起串行调用。建议放在启动页的 onCreate() 方法中或者 Application 的 onCreate() 方法中去调用 </font>
 - 不要频繁的多次调用
 
 #### 代码说明
