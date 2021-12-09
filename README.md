@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.1.2.2'
+implementation 'io.github.yidun:quicklogin:3.1.3'
 ```
 ### 本地手动依赖
 
@@ -377,6 +377,9 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setNavTitleDpSize            | navTitleDpSize:int           | 设置导航栏标题大小，单位 dp |
 | setNavTitleBold              | navTitleBold:boolean         | 设置导航栏标题是否为粗体    |
 | setHideNavigation            | isHideNavigation:boolean     | 设置是否隐藏导航栏     |
+| setNavTitleDrawable          | navTitleDrawable:Drawable    | 设置导航栏标题居左图标     |
+| setNavTitleDrawablePadding   | navTitleDrawablePadding:int  | 设置导航栏标题居左图标和文本的间距     |
+
 
 ##### 应用 Logo
 
@@ -491,11 +494,15 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setActivityTranslateAnimation | enterAnimation:String,exitAnimation:String | 设置授权页进场与出场动画，enterAnimation 进场动画xml无后缀文件名，exitAnimation 出场动画xml无后缀文件名，如进场动画文件名为 activity_enter_anim.xml，则进场动画参数传入“activity_enter_anim" |
 | setActivityLifecycleCallbacks | Callbacks:ActivityLifecycleCallbacks | 设置登录页面生命周期监听回调 |
 | setActivityResultCallbacks    | callbacks:ActivityResultCallbacks | 设置登录页面 onActivityResult 回调 |
+| setProtocolBackgroundImage    | protocolBackgroundImage:String | 设置协议详情页背景，图片资源需放置到 drawable 目录下 |
+| setPrivacyDialogText    | privacyDialogText:String | 协议未勾选弹窗自定义message |
+| setPrivacyDialogTextSize| privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
 
 ##### 弹窗模式
 
 ```
-setDialogMode(boolean isDialogMode, int dialogWidth, int dialogHeight, int dialogX, int dialogY, boolean isBottomDialog)
+setDialogMode(boolean isDialogMode, int dialogWidth, int dialogHeight, int dialogX, int dialogY, boolean isBottomDialog) // 授权页弹窗模式
+setProtocolDialogMode(boolean isProtocolDialogMode) // 协议详情页是否开启弹窗模式
 ```
 
 参数说明
