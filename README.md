@@ -600,7 +600,7 @@ addCustomView(View customView, String viewId, int positionType, LoginUiHelper.Cu
 |----|----|-------|
 |customView|View|待添加自定义 View 对象 |
 |viewId|String|待添加自定义 View 的 id|
-|positionType|int|添加位置，包含 2 种类型：`UnifyUiConfig.POSITION_IN_TITLE_BAR`表示添加在导航栏中，`UnifyUiConfig.POSITION_IN_BODY`表示添加到导航栏下方的 BODY 中|
+|positionType|int|添加位置，包含 3 种类型：`UnifyUiConfig.POSITION_IN_TITLE_BAR`表示添加在导航栏中，`UnifyUiConfig.POSITION_IN_BODY`表示添加到导航栏下方的 BODY 中，`UnifyUiConfig.POSITION_IN_ROOT`表示添加到根布局中|
 |listener|CustomViewListener|待添加的自定义 View 的事件监听器|
 
 ### 6. 判断运营商类型(非必须)
