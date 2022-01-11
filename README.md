@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.1.4'
+implementation 'io.github.yidun:quicklogin:3.1.5'
 ```
 ### 本地手动依赖
 
@@ -462,6 +462,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocolLink             | protocolLink:String              | 设置隐私栏协议链接 |
 | setProtocol2Text            | protocol2Text:String             | 设置隐私栏协议 2 文本 |
 | setProtocol2Link            | protocol2Link:String             | 设置隐私栏协议 2 链接 |
+| setProtocol3Text            | protocol3Text:String             | 设置隐私栏协议 3 文本 |
+| setProtocol3Link            | protocol3Link:String             | 设置隐私栏协议 3 链接 |
 | setPrivacyTextEnd           | privacyTextEnd:String            | 设置隐私栏声明部分尾部文案。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"且授权易盾授予本机号码" |
 
 ##### 协议详情 Web 页面导航栏
@@ -470,7 +472,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | :------------------------------- | ------------------------------ | ---------------------------------- |
 | setProtocolPageNavTitle          | protocolNavTitle:String                                                       | 设置协议 Web 页面导航栏标题，如果需要根据不同运营商设置不同标题，可使用下面重载接口 |
 | setProtocolPageNavTitle          | cmProtocolNavTitle:String,<br>cuProtocolNavTitle:String,<br>ctProtocolNavTitle:String | 设置协议 Web 页面导航栏标题，可针对不同运营商单独设置 |
-| setProtocolPageNavTitle          | cmProtocolNavTitle:String,<br>cuProtocolNavTitle:String,<br>ctProtocolNavTitle:String,<br>protocolTextNavTitle:String,<br>protocol2TextNavTitle:String | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
+| setProtocolPageNavTitle          | cmProtocolNavTitle:String,<br>cuProtocolNavTitle:String,<br>ctProtocolNavTitle:String,<br>protocolTextNavTitle:String,<br>protocol2TextNavTitle:String<br>protocol3TextNavTitle:String | 设置协议 Web 页面导航栏标题，可根据运营商类型单独设置不同标题，也可针对自身协议设置不同标题 |
 | setProtocolPageNavTitleColor     | protocolNavTitleColor:int                    | 设置协议 Web 页面导航栏标题颜色  |
 | setProtocolPageNavBackIcon       | protocolNavBackIcon:String                   | 设置协议 Web 页面导航栏返回图标 |
 | setProtocolPageNavColor          | protocolNavColor:int                        | 设置协议Web页面导航栏颜色 |
