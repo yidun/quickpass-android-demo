@@ -651,7 +651,7 @@ quickLogin.setPrefetchNumberTimeout(int timeout)
 
 |参数|类型|是否必填|默认值|描述|
 |----|----|--------|------|----|
-|timeout|int|是|6| 单位秒 |
+|timeout|int|是|6000| 单位毫秒 |
 
 ### 9. 设置取号超时时间(非必须)
 
@@ -665,7 +665,7 @@ quickLogin.setFetchNumberTimeout(int timeout)
 
 |参数|类型|是否必填|默认值|描述|
 |----|----|--------|------|----|
-|timeout|int|是|5| 单位秒 |
+|timeout|int|是|5000| 单位毫秒 |
 
 ### 10. 返回 SDK 版本号(非必须)
 
