@@ -491,7 +491,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setBackgroundGif              | backgroundGif:String | 设置登录页面背景为 Gif，Gif 资源需要放置到 drawable 目录下，传入资源名称即可 |
 | setBackgroundVideo            | videoPath:String, videoImage:String | 设置登录页面背景为视频，参数 videoPath 为背景 Video 文件路径:(支持本地路径如："android.resource://" + context.getPackageName() + "/" + R.raw.xxxVideo；支持网络路径如"https://xxx"(建议下载到本地后使用本地路径，网络路径由于网络环境的不可控体验不如直接加载本地视频)，参数 videoImage 为视频播放前的背景图片名字，2 个参数必须都设置 |
 | setBackgroundShadowView       | view:View  | 设置登录页面背景蒙层 View，设置的 View 将位于背景之上其它控件之下。必须配合视频背景使用 |
-| setLoginListener              | loginListener:LoginListener | 设置未同意隐私协议但点击一键登录按钮时的事件监听器，可用于自定义相关提示信息，使用示例可参看 Demo 示例工程 |
+| setLoginListener              | loginListener:LoginListener | 设置未同意隐私协议但点击一键登录按钮时的事件监听器，可用于自定义相关提示(默认为弹窗提示)，使用示例可参看 Demo 示例工程 |
 | setClickEventListener         | clickEventListener:ClickEventListener | 设置授权页面点击事件监听，包括左上角返回按钮，登录按钮，隐私协议复选框，隐私协议。当这4类元素被点击时会回调传入的ClickEventListener的onClick(int viewType, int code)接口，viewType为1时表示隐私协议，2表示复选框，3表示左上角返回按钮，4表示登录按钮。当viewType为2或4时，code字段为1则表示复选框勾选，为0则表示复选框未勾选 |
 | setActivityTranslateAnimation | enterAnimation:String,exitAnimation:String | 设置授权页进场与出场动画，enterAnimation 进场动画xml无后缀文件名，exitAnimation 出场动画xml无后缀文件名，如进场动画文件名为 activity_enter_anim.xml，则进场动画参数传入“activity_enter_anim" |
 | setActivityLifecycleCallbacks | Callbacks:ActivityLifecycleCallbacks | 设置登录页面生命周期监听回调 |
