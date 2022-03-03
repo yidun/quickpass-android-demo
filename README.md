@@ -122,6 +122,17 @@ ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PH
 }
 ```
 
+### 资源保护配置
+
+打包配置了 shrinkResources true 之后发现资源找不到情况需要配置下资源保护
+在 res/raw/keep.xml 添加需要保护的资源
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/yd_*,@anim/yd_*,@anim/umcsdk*",@drawable/umcsdk*",@drawable/yd_*",@drawable/dialog_loading,@drawable/loading"/>
+```
+
 ## 快速调用示例
 
 ### 一键登录
