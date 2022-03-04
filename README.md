@@ -662,9 +662,9 @@ quickLogin.setPrefetchNumberTimeout(int timeout)
 
 |参数|类型|是否必填|默认值|描述|
 |----|----|--------|------|----|
-|timeout|int|是|6| 单位秒 |
+|timeout|int|是|8| 单位秒 |
 
-### 9. 设置取号超时时间(非必须)
+### 9. 设置本机校验超时时间(非必须，仅联通有效)
 
 #### 代码说明
 
