@@ -124,13 +124,13 @@ ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PH
 
 ### 资源保护配置
 
-打包配置了 shrinkResources true 之后发现资源找不到情况需要配置下资源保护
+打包配置了 shrinkResources true 之后（或者使用了微信资源混淆andResGuard）发现资源找不到情况需要配置下资源保护
 在 res/raw/keep.xml 添加需要保护的资源
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools"
-    tools:keep="@layout/yd_*,@anim/yd_*,@anim/umcsdk*",@drawable/umcsdk*",@drawable/yd_*",@drawable/dialog_loading,@drawable/loading"/>
+    tools:keep="@layout/yd_*,@anim/yd_*,@anim/umcsdk*",@drawable/umcsdk*",@drawable/yd_*",@drawable/dialog_loading,@drawable/loading,...配置文件通过api设置的所有资源"/>
 ```
 
 ## 快速调用示例
