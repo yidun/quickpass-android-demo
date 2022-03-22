@@ -52,16 +52,6 @@ fun getScreenHeight(context: Context): Int {
     return (outMetrics.heightPixels.toFloat()).px2dp(context)
 }
 
-fun getRandomString(length: Int): String {
-    val keyString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    val sb = StringBuffer()
-    val len = keyString.length
-    for (i in 0 until length) {
-        sb.append(keyString[(Math.random() * (len - 1)).roundToInt()])
-    }
-    return sb.toString()
-}
-
 fun generateSign(secretKey: String, params: Map<String, String>): String? {
     var signature: String? = ""
     if (TextUtils.isEmpty(secretKey) || params.isEmpty()) {
