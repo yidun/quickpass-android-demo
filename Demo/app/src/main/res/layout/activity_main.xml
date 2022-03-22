@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:text="本机校验" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -65,26 +65,7 @@
             android:layout_weight="1"
             android:onClick="reset"
             android:text="重置为默认配置" />
-    </android.support.v7.widget.LinearLayoutCompat>
-
-    <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Switch
-            android:id="@+id/switch_dynamic_pull_config"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="拉取UI配置(仅供QA自动化测试使用)" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="freshUiConfig"
-            android:text="刷新UI配置" />
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <Switch
         android:id="@+id/switch_on_trial_key"

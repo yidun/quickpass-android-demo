@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/demo_seletor_A"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_a_config"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/demo_seletor_B"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_b_config"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/demo_seletor_C"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_c_config"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/demo_seletor_D"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_d_config"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/demo_seletor_E"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_e_config"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/demo_benji"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/login_demo_auth_bt"
+        android:text="@string/demo_benji"
+        android:textColor="@android:color/white" />
+</LinearLayout>

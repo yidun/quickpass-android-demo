@@ -52,7 +52,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginRight="30dp"
-            android:background="@drawable/weixin"
+            android:background="@drawable/login_demo_weixin"
             android:scaleType="centerCrop" />
 
         <ImageView
@@ -60,13 +60,13 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginRight="30dp"
-            android:background="@drawable/qq" />
+            android:background="@drawable/login_demo_qq" />
 
         <ImageView
             android:id="@+id/weibo"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="@drawable/weibo" />
+            android:background="@drawable/login_demo_weibo" />
     </LinearLayout>
 
 

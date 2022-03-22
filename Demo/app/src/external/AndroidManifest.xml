@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".QuickLoginApplication"
+        android:name=".MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,13 +16,36 @@
 
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".view.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".view.SelectorActivity"
+            android:exported="true"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".view.BenjiActivity"
+            android:exported="true"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".view.ResultActivity"
+            android:exported="true"
+            android:screenOrientation="behind" />
     </application>
 
 </manifest>

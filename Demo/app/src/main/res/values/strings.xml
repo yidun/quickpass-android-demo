@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">QuickLogin</string>
+    <string name="app_name">号码认证</string>
+    <string name="tv_skip">跳过</string>
+    <string name="tv_splash_1">全新的号码认证</string>
+    <string name="tv_splash_2">解决方案</string>
+    <string name="demo_a_config">普通模式</string>
+    <string name="demo_b_config">自定义view在Body</string>
+    <string name="demo_c_config">自定义view在Header</string>
+    <string name="demo_d_config">Dialog模式</string>
+    <string name="demo_e_config">Dialog底部模式</string>
+    <string name="demo_benji">本机校验</string>
+    <string name="btn_retry">再次体验</string>
+    <string name="tv_result">获取结果</string>
 </resources>
