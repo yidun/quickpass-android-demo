@@ -469,6 +469,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyTextStart         | privacyTextStart:String          |  设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
 | setPrivacyTextStartSize     | spVal:float                      | 设置隐私开始字体大小 |
 | setPrivacyLineSpacing       | add:float,mult:float             | 设置隐私行间距 add 行间距 mult 倍数 |
+| setHidePrivacySmh       | hidePrivacySmh:boolean             | 是否隐藏书名号 |
 | setProtocolText             | protocolText:String              | 设置隐私栏协议文本 |
 | setProtocolLink             | protocolLink:String              | 设置隐私栏协议链接 |
 | setProtocol2Text            | protocol2Text:String             | 设置隐私栏协议 2 文本 |
