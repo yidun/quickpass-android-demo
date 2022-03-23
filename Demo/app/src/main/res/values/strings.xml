@@ -8,6 +8,7 @@
     <string name="demo_c_config">自定义view在Header</string>
     <string name="demo_d_config">Dialog模式</string>
     <string name="demo_e_config">Dialog底部模式</string>
+    <string name="demo_f_config">自定义view相对于登录按钮布局</string>
     <string name="demo_benji">本机校验</string>
     <string name="btn_retry">再次体验</string>
     <string name="tv_result">获取结果</string>

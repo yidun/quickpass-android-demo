@@ -52,6 +52,13 @@ class SelectorActivity : BaseActivity() {
             openAuth()
         }
 
+        demo_seletor_F?.setOnClickListener {
+            quickLogin?.setUnifyUiConfig(UiConfigs.getFConfig(
+                this
+            ) { _, _ -> "编辑".showToast(this) })
+            openAuth()
+        }
+
         demo_benji?.setOnClickListener {
             startActivity(Intent(this, BenjiActivity::class.java))
         }

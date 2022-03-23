@@ -159,8 +159,8 @@ object UiConfigs {
         closeBtn.scaleType = ImageView.ScaleType.FIT_XY
         closeBtn.setBackgroundColor(Color.TRANSPARENT)
         val layoutParams = RelativeLayout.LayoutParams(50, 50)
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.CENTER_VERTICAL)
-        layoutParams.topMargin = 30
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
+        layoutParams.addRule(RelativeLayout.CENTER_VERTICAL)
         layoutParams.rightMargin = 50
         closeBtn.layoutParams = layoutParams
 
@@ -329,6 +329,71 @@ object UiConfigs {
             .setDialogMode(true, dialogWidth, dialogHeight, 0, 0, true)
             .setProtocolDialogMode(true)
             .setActivityTranslateAnimation("yd_dialog_fade_in", "yd_dialog_fade_out")
+            .build(context)
+    }
+
+    fun getFConfig(context: Context, listener: LoginUiHelper.CustomViewListener): UnifyUiConfig {
+        val editBtn = ImageView(context)
+        editBtn.setImageResource(R.drawable.login_demo_edit)
+        editBtn.scaleType = ImageView.ScaleType.FIT_XY
+        editBtn.setBackgroundColor(Color.TRANSPARENT)
+        val layoutParams = RelativeLayout.LayoutParams(50, 50)
+        layoutParams.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.oauth_login)
+        layoutParams.addRule(RelativeLayout.RIGHT_OF, R.id.oauth_login)
+        layoutParams.leftMargin = 20
+        editBtn.layoutParams = layoutParams
+
+        return UnifyUiConfig.Builder()
+            .setStatusBarColor(Color.parseColor("#ffffff"))
+            .setStatusBarDarkColor(true)
+            .setNavigationHeight(56) // 设置导航栏高度
+            .setNavigationTitle("一键登录") // 设置导航栏文案
+            .setHideNavigationBackIcon(true) // 设置是否隐藏导航栏按钮
+            .setLogoIconName("ico_logo")
+            .setLogoWidth(200)
+            .setLogoHeight(70)
+            .setLogoTopYOffset(90)
+            .setMaskNumberColor(Color.BLACK)
+            .setMaskNumberSize(25)
+            .setMaskNumberTypeface(Typeface.SERIF)
+            .setMaskNumberTopYOffset(190)
+            .setSloganSize(13)
+            .setSloganColor(Color.parseColor("#9A9A9A"))
+            .setSloganTopYOffset(240)
+            .setLoginBtnText("易盾一键登录")
+            .setLoginBtnTextColor(Color.WHITE)
+            .setLoginBtnBackgroundRes("login_demo_auth_bt")
+            .setLoginBtnWidth(240)
+            .setLoginBtnHeight(45)
+            .setLoginBtnTextSize(15)
+            .setLoginBtnTopYOffset(280)
+            .setPrivacyTextStart("我已阅读并同意")
+            .setProtocolText("用户协议")
+            .setProtocolLink("https://www.baidu.com")
+            .setPrivacyTextEnd("")
+            .setPrivacyTextColor(Color.parseColor("#292929"))
+            .setPrivacyProtocolColor(Color.parseColor("#3F51B5"))
+            .setPrivacySize(13)
+            .setPrivacyBottomYOffset(24)
+            .setPrivacyMarginLeft(40)
+            .setPrivacyMarginRight(40)
+            .setPrivacyTextMarginLeft(8)
+            .setPrivacyTextGravityCenter(true)
+            .setPrivacyTextLayoutGravity(Gravity.CENTER)
+            .setPrivacyCheckBoxWidth(20)
+            .setPrivacyCheckBoxHeight(20)
+            .setHidePrivacySmh(true)
+            .setCheckedImageName("login_demo_check_cus")
+            .setUnCheckedImageName("login_demo_uncheck_cus")
+            .setProtocolPageNavTitle("移动服务及隐私协议", "联通服务及隐私协议", "电信服务及隐私协议")
+            .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))
+            // 自定义控件在header
+            .addCustomView(
+                editBtn,
+                "edit_btn",
+                UnifyUiConfig.POSITION_IN_BODY,
+                listener
+            )
             .build(context)
     }
 }
