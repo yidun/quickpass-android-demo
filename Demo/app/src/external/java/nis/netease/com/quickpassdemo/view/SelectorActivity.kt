@@ -85,7 +85,7 @@ class SelectorActivity : BaseActivity() {
             // 取消登录包括按物理返回键返回
             override fun onCancelGetToken() {
                 quickLogin?.quitActivity()
-                Log.d("SelectorActivity", "用户取消登录")
+                Log.d("SelectorActivity", "用户取消登录/包括物理返回")
             }
         })
     }

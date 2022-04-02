@@ -328,7 +328,7 @@ object UiConfigs {
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))
             .setDialogMode(true, dialogWidth, dialogHeight, 0, 0, true)
             .setProtocolDialogMode(true)
-            .setActivityTranslateAnimation("yd_dialog_fade_in", "yd_dialog_fade_out")
+            .setActivityTranslateAnimation("xd_dialog_enter", "xd_dialog_exit")
             .build(context)
     }
 
