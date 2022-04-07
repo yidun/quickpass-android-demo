@@ -397,7 +397,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 
 | 方法                  | 参数                      | 说明                                        |
 | :--------------------| ------------------------- |-------------------------------------------|
-| setLogoIconName      | logoIconName:STring       | 设置应用 logo 图标，logoIconName：logo 图标名称 |
+| setLogoIconName      | logoIconName:String       | 设置应用 logo 图标，logoIconName：logo 图标名称 |
 | setLogoIconDrawable  | logoIconDrawable:Drawable | 设置应用 logo 图标 Drawable 值 |
 | setLogoWidth         | logoWidth:int             | 设置应用logo宽度，单位dp |
 | setLogoHeight        | logoHeight:int            | 设置应用 logo 高度，单位 dp  |
