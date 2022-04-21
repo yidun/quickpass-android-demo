@@ -533,11 +533,7 @@ setProtocolDialogMode(boolean isProtocolDialogMode) // 协议详情页是否开�
 ##### 设置横竖屏
 在 manifest 文件中，指定授权页 activity 的 screenOrientation 为 landscape 即可
 
-注意：只有全面屏不透明的 Activity 才能指定方向，否则在 8.0 系统版本上会报"only fullscreen opaque activities can request orientation"异常
-
-```
-setLandscape(true)
-```
+注意：只有全屏不透明的 Activity 才能指定方向，否则在 8.0 系统版本上会报"only fullscreen opaque activities can request orientation"异常。全屏透明的 Activity 如需指定方向，可以通过指定授权页前面一个界面的方向，授权页跟随前面界面方向，即 “android:screenOrientation="behind"”
 
 ##### 全面屏(背景延伸到状态栏)
 
