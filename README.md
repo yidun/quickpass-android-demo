@@ -91,8 +91,9 @@ ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PH
 ```
 
 配置权限说明
+
 | 权限名字 | 权限说明   | 权限说明 |
-| ------- | -------- | 权限说明 |
+| ------- | -------- | -------- |
 | INTERNET | 允许应用程序联网 | 用于访问网关和认证服务器 |
 | ACCESS_WIFI_STATE | 允许访问WiFi网络状态信息 | 允许程序访问WiFi网络状态信息 |
 | ACCESS_NETWORK_STATE | 允许访问网络状态 | 区分移动网络或WiFi网络 |
