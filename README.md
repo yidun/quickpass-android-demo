@@ -90,7 +90,7 @@ READ_PHONE_STATE 权限是隐私权限，Android 6.0 及以上需要动态申请
 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
 ```
 
-配置权限说明
+SDK内部权限说明
 
 | 权限名字 | 权限说明   | 权限说明 |
 | ------- | -------- | -------- |
