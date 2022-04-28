@@ -90,6 +90,17 @@ READ_PHONE_STATE 权限是隐私权限，Android 6.0 及以上需要动态申请
 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
 ```
 
+配置权限说明
+| 权限名字 | 权限说明   | 权限说明 |
+| ------- | -------- | 权限说明 |
+| INTERNET | 允许应用程序联网 | 用于访问网关和认证服务器 |
+| ACCESS_WIFI_STATE | 允许访问WiFi网络状态信息 | 允许程序访问WiFi网络状态信息 |
+| ACCESS_NETWORK_STATE | 允许访问网络状态 | 区分移动网络或WiFi网络 |
+| CHANGE_NETWORK_STATE | 允许改变网络连接状态 | 设备在WiFi跟数据双开时，强行切换使用数据网络 |
+| CHANGE_WIFI_STATE | 允许改变WiFi网络连接状态 | 设备在WiFi跟数据双开时，强行切换使用 |
+| READ_PHONE_STATE | 允许读取手机状态 |（可选）获取IMSI用于判断双卡和换卡 |
+
+
 ### 混淆配置
 
 在 proguard-rules.pro 文件中添加如下混淆规则
