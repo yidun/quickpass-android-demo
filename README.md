@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.1.9'
+implementation 'io.github.yidun:quicklogin:3.2.0'
 ```
 ### 本地手动依赖
 
@@ -523,6 +523,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocolBackgroundImage    | protocolBackgroundImage:String | 设置协议详情页背景，图片资源需放置到 drawable 目录下 |
 | setPrivacyDialogText    | privacyDialogText:String | 协议未勾选弹窗自定义message |
 | setPrivacyDialogTextSize| privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
+| setBackPressedAvailable| backPressedAvailable:boolean | 设置物理返回键是否可用 |
 
 ##### 弹窗模式
 
@@ -634,7 +635,7 @@ addCustomView(View customView, String viewId, int positionType, LoginUiHelper.Cu
 #### 代码说明
 
 ```
-quickLogin.getOperatorType(Context context)
+quickLogin.checkNetWork(Context context)
 ```
 
 #### 参数说明
@@ -647,7 +648,7 @@ quickLogin.getOperatorType(Context context)
 
 |类型|描述|
 |----|----|
-| int | 1：电信 2：移动 3：联通 5：未知 |
+| int | 1：电信 2：移动 3：联通 4:wifi 5：未知 |
 
 ### 7. 设置授权页协议复选框是否选中(授权页拉起之后调用，非必须)
 
@@ -732,6 +733,14 @@ quickLogin.setExtendData(JSONObject extendData)
 |参数|类型|是否必填|默认值|描述|
 |----|----|--------|------|----|
 |extendData|JSONObject|是|无| 额外参数 |
+
+### 12. 清预取号缓存(非必须)
+
+#### 代码说明
+
+```
+quickLogin.clearScripCache()
+```
 
 ### 13. 本机校验
 
