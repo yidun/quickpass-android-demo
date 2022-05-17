@@ -778,3 +778,10 @@ public interface QuickLoginTokenListener {
     void onGetTokenError(String YDToken, String msg);
 }
 ```
+
+## 常见报错
+
+|code|message|说明|
+|----|----|--------|
+| 401 | forbidden | 易盾业务id不准确 |
+||sign-invalid reqId:94b1328f9e1539f2a80ae1b8bd4bc6b6|签名与包名不对应|
