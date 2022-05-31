@@ -734,7 +734,7 @@ quickLogin.setExtendData(JSONObject extendData)
 |----|----|--------|------|----|
 |extendData|JSONObject|是|无| 额外参数 |
 
-### 12. 清预取号缓存(非必须)
+### 13. 清预取号缓存(非必须)
 
 #### 代码说明
 
@@ -742,7 +742,7 @@ quickLogin.setExtendData(JSONObject extendData)
 quickLogin.clearScripCache()
 ```
 
-### 13. 本机校验
+### 14. 本机校验
 
 在初始化之后执行，本机校验和一键登录可共用初始化，本机校验界面需自行实现
 
