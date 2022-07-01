@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -66,7 +67,7 @@ object UiConfigs {
             .setProtocolPageNavTitle("移动服务及隐私协议", "联通服务及隐私协议", "电信服务及隐私协议")// 设置协议详细页标题
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))// 设置协议详细页导航栏标题颜色
             .setLoginListener(object : LoginListener() {
-                override fun onDisagreePrivacy(privacyTv: TextView?): Boolean {
+                override fun onDisagreePrivacy(privacyTv: TextView?, btnLogin: Button?): Boolean {
                     privacyTv?.let {
                         val animator =
                             ObjectAnimator.ofFloat(privacyTv, "translationX", 0f, 40f, -40f, 0f)
