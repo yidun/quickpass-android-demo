@@ -523,6 +523,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocolBackgroundImage    | protocolBackgroundImage:String | 设置协议详情页背景，图片资源需放置到 drawable 目录下 |
 | setPrivacyDialogText    | privacyDialogText:String | 协议未勾选弹窗自定义message |
 | setPrivacyDialogTextSize| privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
+| setPrivacyDialogAuto    | privacyDialogAuto:boolean | 协议未勾选弹窗点击确认是否自动登录 |
 | setBackPressedAvailable| backPressedAvailable:boolean | 设置物理返回键是否可用 |
 
 ##### 弹窗模式
