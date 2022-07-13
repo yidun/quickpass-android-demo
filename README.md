@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.2.2'
+implementation 'io.github.yidun:quicklogin:3.2.2.1'
 ```
 ### 本地手动依赖
 
@@ -525,6 +525,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyDialogTextSize| privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
 | setPrivacyDialogAuto    | privacyDialogAuto:boolean | 协议未勾选弹窗点击确认是否自动登录 |
 | setBackPressedAvailable| backPressedAvailable:boolean | 设置物理返回键是否可用 |
+| setLoadingVisible| loadingVisible:boolean | 点击登录按钮loading是否显示 |
+| setLoadingView| loadingView:ViewGroup | 自定义loadingView |
 
 ##### 弹窗模式
 
@@ -664,6 +666,20 @@ quickLogin.setPrivacyState(boolean isChecked)
 |参数|类型|是否必填|默认值|描述|
 |----|----|--------|------|----|
 |isChecked|boolean|是|true| 复选框是否选中 |
+
+### 8. 设置授权页点击登录按钮loading是否显示(授权页拉起之后调用，非必须)
+
+#### 代码说明
+
+```
+quickLogin.setLoadingVisibility(boolean isVisible)
+```
+
+#### 参数说明
+
+|参数|类型|是否必填|默认值|描述|
+|----|----|--------|------|----|
+|isVisible|boolean|是|true| loading是否显示 |
 
 ### 8. 设置预取号超时时间(非必须)
 
