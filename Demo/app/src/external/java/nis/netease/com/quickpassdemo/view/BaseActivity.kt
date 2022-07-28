@@ -1,6 +1,7 @@
 package nis.netease.com.quickpassdemo.view
 
 import androidx.fragment.app.FragmentActivity
+import nis.netease.com.quickpassdemo.tools.open
 
 /**
  * @author liuxiaoshuai
@@ -10,7 +11,7 @@ import androidx.fragment.app.FragmentActivity
  */
 open class BaseActivity : FragmentActivity() {
     fun startResultActivity(token: String, accessToken: String, mobileNumber: String) {
-        nis.netease.com.quickpassdemo.tools.startActivity<ResultActivity>(this) {
+        open<ResultActivity>(this) {
             putExtra("token", token)
             putExtra("accessToken", accessToken)
             putExtra("mobileNumber", mobileNumber)

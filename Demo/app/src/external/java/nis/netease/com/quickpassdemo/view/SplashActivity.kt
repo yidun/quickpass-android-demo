@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginPreMobileListener
 import kotlinx.android.synthetic.external.activity_splash.*
 import nis.netease.com.quickpassdemo.MyApplication
@@ -54,17 +55,14 @@ class SplashActivity : BaseActivity() {
             preLogin()
         } else {
             PermissionX.request(this, Manifest.permission.READ_PHONE_STATE) { allGranted, _ ->
-                if (allGranted) {
-                    mCountDownTimer?.start()
-                    preLogin()
-                }
+                mCountDownTimer?.start()
+                preLogin()
             }
         }
     }
 
     private fun preLogin() {
-        val quickLogin = (application as? MyApplication)?.quickLogin
-        quickLogin?.prefetchMobileNumber(object : QuickLoginPreMobileListener() {
+        QuickLogin.getInstance().prefetchMobileNumber(object : QuickLoginPreMobileListener() {
             override fun onGetMobileNumberSuccess(token: String?, mobileNumber: String?) {
                 Log.d("预取号成功", "易盾token${token}掩码${mobileNumber}")
             }

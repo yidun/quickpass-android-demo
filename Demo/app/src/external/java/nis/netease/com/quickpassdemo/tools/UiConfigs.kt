@@ -2,7 +2,9 @@ package nis.netease.com.quickpassdemo.tools
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.Typeface
 import android.view.Gravity
@@ -11,6 +13,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
+import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.helper.UnifyUiConfig
 import com.netease.nis.quicklogin.listener.LoginListener
 import com.netease.nis.quicklogin.utils.LoginUiHelper
@@ -23,7 +27,17 @@ import nis.netease.com.quickpassdemo.R
  * @email liulingfeng@mistong.com
  */
 object UiConfigs {
+    @SuppressLint("InflateParams")
     fun getAConfig(context: Context): UnifyUiConfig {
+        val inflater = LayoutInflater.from(context)
+        val loadingRel =
+            inflater.inflate(R.layout.layout_loading, null) as RelativeLayout
+        val layoutParamsLoading = RelativeLayout.LayoutParams(
+            RelativeLayout.LayoutParams.MATCH_PARENT,
+            RelativeLayout.LayoutParams.MATCH_PARENT
+        )
+        loadingRel.layoutParams = layoutParamsLoading
+
         return UnifyUiConfig.Builder()
             .setStatusBarColor(Color.parseColor("#ffffff")) // 状态栏颜色
             .setStatusBarDarkColor(true) // 状态栏字体图标颜色是否为暗色
@@ -35,6 +49,7 @@ object UiConfigs {
             .setMaskNumberSize(25) // 设置手机掩码字体大小
             .setMaskNumberTypeface(Typeface.SERIF) // 设置手机掩码字体
             .setMaskNumberTopYOffset(190) // 设置手机掩码顶部Y轴偏移
+//            .setMaskNumberBackgroundRes("xxx") // 设置手机掩码背景
             .setSloganSize(13) // 设置认证品牌字体大小
             .setSloganColor(Color.parseColor("#9A9A9A")) // 设置认证品牌颜色
             .setSloganTopYOffset(240) // 设置认证品牌顶部 Y 轴偏移
@@ -66,6 +81,9 @@ object UiConfigs {
             .setUnCheckedImageName("login_demo_uncheck_cus") // 设置隐私栏复选框未选中时的图片资源
             .setProtocolPageNavTitle("移动服务及隐私协议", "联通服务及隐私协议", "电信服务及隐私协议")// 设置协议详细页标题
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))// 设置协议详细页导航栏标题颜色
+            .setBackgroundVideo("android.resource://" + context.packageName + "/" + R.raw.monkey, "bg_1080") // 设置视频背景
+            .setLoadingVisible(true) // 点击授权页登录按钮loading
+            .setLoadingView(loadingRel) // loading view自定义
             .setLoginListener(object : LoginListener() {
                 override fun onDisagreePrivacy(privacyTv: TextView?, btnLogin: Button?): Boolean {
                     privacyTv?.let {
@@ -151,6 +169,28 @@ object UiConfigs {
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))
             // 自定义控件在body
             .addCustomView(otherLoginRel, "relative", UnifyUiConfig.POSITION_IN_BODY, null)
+            .setLoginListener(object : LoginListener() {
+                override fun onDisagreePrivacy(privacyTv: TextView?, btnLogin: Button?): Boolean {
+                    btnLogin?.let { btn ->
+                        if (btn.context is Activity) {
+                            val dialog = AlertDialog.Builder(btn.context)
+                                .setMessage("隐私协议，请仔细阅读")
+                                .setPositiveButton("确定") { dialog, _ ->
+                                    dialog.dismiss()
+                                    QuickLogin.getInstance().setPrivacyState(true)
+                                    btn.performClick()
+                                }
+                                .setNegativeButton("取消") { dialog, _ ->
+                                    dialog.dismiss()
+                                }.create()
+                            if (!((btn.context as Activity).isFinishing)) {
+                                dialog.show()
+                            }
+                        }
+                    }
+                    return true
+                }
+            })
             .build(context)
     }
 
@@ -274,6 +314,7 @@ object UiConfigs {
             .setBackgroundImage("login_demo_dialog_bg") // 设置背景
             .setProtocolBackgroundImage("login_demo_dialog_bg") // 设置协议详情页背景
             .setActivityTranslateAnimation("yd_dialog_fade_in", "yd_dialog_fade_out") // 设置进出动画
+            .setBackPressedAvailable(false)
             .build(context)
     }
 
@@ -329,6 +370,7 @@ object UiConfigs {
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))
             .setDialogMode(true, dialogWidth, dialogHeight, 0, 0, true)
             .setProtocolDialogMode(true)
+            .setPrivacyDialogAuto(true)
             .setActivityTranslateAnimation("xd_dialog_enter", "xd_dialog_exit")
             .build(context)
     }
@@ -339,8 +381,8 @@ object UiConfigs {
         editBtn.scaleType = ImageView.ScaleType.FIT_XY
         editBtn.setBackgroundColor(Color.TRANSPARENT)
         val layoutParams = RelativeLayout.LayoutParams(50, 50)
-        layoutParams.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.oauth_login)
-        layoutParams.addRule(RelativeLayout.RIGHT_OF, R.id.oauth_login)
+        layoutParams.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.yd_btn_oauth)
+        layoutParams.addRule(RelativeLayout.RIGHT_OF, R.id.yd_btn_oauth)
         layoutParams.leftMargin = 20
         editBtn.layoutParams = layoutParams
 

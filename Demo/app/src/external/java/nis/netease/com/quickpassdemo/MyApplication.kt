@@ -10,12 +10,10 @@ import com.netease.nis.quicklogin.QuickLogin
  * @email liulingfeng@mistong.com
  */
 class MyApplication : Application() {
-    var quickLogin: QuickLogin? = null
-
     /**
      * 一键登录业务id
      */
-    private val onePassId: String = "xxx"
+    private val onePassId: String = "易盾业务id"
 
     /**
      * 本机校验业务id
@@ -25,7 +23,7 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        quickLogin = QuickLogin.getInstance(this, onePassId)
-        quickLogin?.setDebugMode(true)
+        QuickLogin.getInstance().init(this, onePassId)
+        QuickLogin.getInstance().setDebugMode(true)
     }
 }

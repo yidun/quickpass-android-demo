@@ -18,28 +18,27 @@ import nis.netease.com.quickpassdemo.tools.showToast
  * @email liulingfeng@mistong.com
  */
 class BenjiActivity : AppCompatActivity() {
-    private var quickLogin: QuickLogin? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_benji)
 
-        quickLogin = (application as MyApplication).quickLogin
         btn_benji.setOnClickListener {
             if (TextUtils.isEmpty(et_number.text)) {
                 "请输入正确的手机号".showToast(this)
             } else {
-                quickLogin?.getToken(et_number.text.toString(), object : QuickLoginTokenListener() {
-                    override fun onGetTokenSuccess(token: String?, accessCode: String?) {
-                        Log.d("获取授权码成功", "易盾token${token}运营商token${accessCode}")
-                        // 服务端二次校验
-                    }
+                QuickLogin.getInstance()
+                    .getToken(et_number.text.toString(), object : QuickLoginTokenListener() {
+                        override fun onGetTokenSuccess(token: String?, accessCode: String?) {
+                            Log.d("获取授权码成功", "易盾token${token}运营商token${accessCode}")
+                            // 服务端二次校验
+                        }
 
-                    override fun onGetTokenError(token: String?, msg: String?) {
-                        Log.e("获取授权码失败", "易盾token${token}错误信息${msg}")
-                    }
+                        override fun onGetTokenError(token: String?, msg: String?) {
+                            Log.e("获取授权码失败", "易盾token${token}错误信息${msg}")
+                        }
 
-                })
+                    })
             }
         }
 

@@ -42,7 +42,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.2.2.1'
+implementation 'io.github.yidun:quicklogin:3.2.3'
 ```
 ### 本地手动依赖
 
@@ -157,7 +157,8 @@ public class DemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final QuickLogin quickLogin = QuickLogin.getInstance(this, "业务id");
+        final QuickLogin quickLogin = QuickLogin.getInstance();
+        quickLogin.init(this, "业务id");
         quickLogin.prefetchMobileNumber(new QuickLoginPreMobileListener() {
             @Override
             public void onGetMobileNumberSuccess(String YDToken, String mobileNumber) {
@@ -204,7 +205,8 @@ public class DemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        QuickLogin quickLogin = QuickLogin.getInstance(this,"业务id");
+        QuickLogin quickLogin = QuickLogin.getInstance();
+        quickLogin.init(this,"业务id");
         quickLogin.getToken("手机号码", new QuickLoginTokenListener() {
             @Override
             public void onGetTokenSuccess(String YDToken, String accessCode) {
@@ -239,7 +241,8 @@ demo使用注意事项：
 #### 代码说明
 
 ```
-QuickLogin quickLogin = QuickLogin.getInstance(Context context, String businessId);
+QuickLogin quickLogin = QuickLogin.getInstance();
+quickLogin.init(Context context, String businessId);
 ```
 
 #### 参数说明
@@ -429,6 +432,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setMaskNumberTypeface      | tf:Typeface                           | 设置手机掩码字体 |
 | setMaskNumberTopYOffset    | maskNumberTopYOffset:int              | 设置手机掩码顶部Y轴偏移，单位 dp |
 | setMaskNumberBottomYOffset | maskNumberBottomYOffset:int           | 设置手机掩码距离屏幕底部偏移，单位 dp |
+| setMaskNumberBackgroundRes | maskNumberBackgroundRes:String           | 设置手机掩码背景资源，该资源需要放置在 drawable 目录下 |
 | setMaskNumberListener      | maskNumberListener:MaskNumberListener | 设置点击手机掩码监听器，用于对手机掩码栏实现自定义功能（可参见 Demo 示例工程）|
 
 ##### 认证品牌

@@ -6,7 +6,7 @@ android {
     compileSdkVersion 31
     defaultConfig {
         applicationId "nis.netease.com.quickpassdemo"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -28,6 +28,7 @@ android {
     }
     signingConfigs {
         debug {
+
         }
     }
     flavorDimensions 'type'
@@ -68,19 +69,23 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    externalImplementation 'io.github.yidun:quicklogin:3.1.9'
-    internalImplementation 'io.github.yidun:onePass:1.5.6'
-    implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-
+    externalImplementation 'io.github.yidun:quicklogin:3.2.4'
+    internalImplementation 'io.github.yidun:onePass:1.5.7'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation(name: 'GrowDevice-release_v1.7.2.4_202207181636', ext: 'aar')
 }

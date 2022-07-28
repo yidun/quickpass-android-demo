@@ -18,42 +18,40 @@ import nis.netease.com.quickpassdemo.tools.showToast
  * @email liulingfeng@mistong.com
  */
 class SelectorActivity : BaseActivity() {
-    private var quickLogin: QuickLogin? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
 
-        quickLogin = (application as MyApplication).quickLogin
         initListeners()
     }
 
     private fun initListeners() {
         demo_seletor_A?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getAConfig(this))
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getAConfig(this))
             openAuth()
         }
         demo_seletor_B?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getBConfig(this))
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getBConfig(this))
             openAuth()
         }
         demo_seletor_C?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getCConfig(
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getCConfig(
                 this
-            ) { _, _ -> quickLogin?.quitActivity() })
+            ) { _, _ -> QuickLogin.getInstance().quitActivity() })
             openAuth()
         }
         demo_seletor_D?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getDConfig(this))
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getDConfig(this))
             openAuth()
         }
         demo_seletor_E?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getEConfig(this))
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getEConfig(this))
             openAuth()
         }
 
         demo_seletor_F?.setOnClickListener {
-            quickLogin?.setUnifyUiConfig(UiConfigs.getFConfig(
+            QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getFConfig(
                 this
             ) { _, _ -> "编辑".showToast(this) })
             openAuth()
@@ -65,9 +63,9 @@ class SelectorActivity : BaseActivity() {
     }
 
     private fun openAuth() {
-        quickLogin?.onePass(object : QuickLoginTokenListener() {
+        QuickLogin.getInstance().onePass(object : QuickLoginTokenListener() {
             override fun onGetTokenSuccess(token: String?, accessCode: String?) {
-                quickLogin?.quitActivity()
+                QuickLogin.getInstance().quitActivity()
                 Log.d("SelectorActivity", "易盾token${token}运营商token${accessCode}")
                 token?.let {
                     accessCode?.let { accessCode ->
@@ -77,14 +75,15 @@ class SelectorActivity : BaseActivity() {
             }
 
             override fun onGetTokenError(token: String?, msg: String?) {
-                quickLogin?.quitActivity()
+                QuickLogin.getInstance().quitActivity()
+                QuickLogin.getInstance().clearScripCache(this@SelectorActivity)
                 msg?.showToast(this@SelectorActivity)
                 Log.e("SelectorActivity", "易盾token${token}错误信息${msg}")
             }
 
             // 取消登录包括按物理返回键返回
             override fun onCancelGetToken() {
-                quickLogin?.quitActivity()
+                QuickLogin.getInstance().quitActivity()
                 Log.d("SelectorActivity", "用户取消登录/包括物理返回")
             }
         })

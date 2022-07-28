@@ -7,13 +7,14 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.netease.nis.basesdk.EncryptUtil.getRandomString
 import com.netease.nis.basesdk.HttpUtil
+import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginPreMobileListener
 import kotlinx.android.synthetic.external.activity_result.*
-import nis.netease.com.quickpassdemo.MyApplication
 import nis.netease.com.quickpassdemo.R
 import nis.netease.com.quickpassdemo.tools.generateSign
 import nis.netease.com.quickpassdemo.tools.showToast
 import org.json.JSONObject
+import java.net.URLEncoder
 import java.util.HashMap
 
 /**
@@ -23,7 +24,7 @@ import java.util.HashMap
  * @email liulingfeng@mistong.com
  */
 class ResultActivity : AppCompatActivity() {
-    private val businessId = "xxx"
+    private val businessId = "易盾业务id"
     private val secretId = "xxx"
     private val secretKey = "xxx"
 
@@ -43,7 +44,7 @@ class ResultActivity : AppCompatActivity() {
         validate(token, accessToken)
     }
 
-    // 建议放在服务端交互
+    // 建议放在服务端交互/demo为流程完整性考虑放在客户端
     private fun validate(token: String?, accessCode: String?) {
         val nonce = getRandomString(32)
         val timestamp = System.currentTimeMillis().toString()
@@ -59,7 +60,7 @@ class ResultActivity : AppCompatActivity() {
         val sign = generateSign(secretKey, map)
         val sbUrl = StringBuffer()
         sbUrl.append("http://ye.dun.163yun.com/v1/oneclick/check")
-        sbUrl.append("?accessToken=$accessCode")
+        sbUrl.append("?accessToken=${URLEncoder.encode(accessCode, "UTF-8")}")
         sbUrl.append("&businessId=${businessId}")
         sbUrl.append("&token=$token")
         sbUrl.append("&signature=$sign")
@@ -101,9 +102,9 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun preLogin() {
-        val quickLogin = (application as? MyApplication)?.quickLogin
-        quickLogin?.prefetchMobileNumber(object : QuickLoginPreMobileListener() {
+        QuickLogin.getInstance().prefetchMobileNumber(object : QuickLoginPreMobileListener() {
             override fun onGetMobileNumberSuccess(token: String?, mobileNumber: String?) {
+                finish()
                 Log.d("预取号成功", "易盾token${token}掩码${mobileNumber}")
             }
 
