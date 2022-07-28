@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Theme.ActivityTransparentStyle" parent="Theme.AppCompat.Light.NoActionBar">
+          <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置状态栏透明-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--延伸到顶部状态栏-->
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>
