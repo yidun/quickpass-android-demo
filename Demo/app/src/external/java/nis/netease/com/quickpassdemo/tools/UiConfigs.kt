@@ -4,7 +4,6 @@ import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
-import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.Typeface
 import android.view.Gravity
@@ -270,7 +269,7 @@ object UiConfigs {
             .setNavigationHeight(48)
             .setNavigationTitle("欢迎来到一键登录")
             .setNavigationIcon("login_demo_close")
-            .setNavigationIconGravity(Gravity.RIGHT) // 设置导航栏按钮方向
+            .setNavigationIconGravity(Gravity.END) // 设置导航栏按钮方向
             .setNavTitleBold(true)
             .setNavigationIconMargin(16.0f.dip2px(context))
             .setHideLogo(true)

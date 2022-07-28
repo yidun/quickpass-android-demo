@@ -9,7 +9,6 @@ import android.util.Log
 import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginPreMobileListener
 import kotlinx.android.synthetic.external.activity_splash.*
-import nis.netease.com.quickpassdemo.MyApplication
 import nis.netease.com.quickpassdemo.R
 import nis.netease.com.quickpassdemo.permissionx.PermissionX
 import nis.netease.com.quickpassdemo.tools.showToast
@@ -54,7 +53,7 @@ class SplashActivity : BaseActivity() {
             // 预取号
             preLogin()
         } else {
-            PermissionX.request(this, Manifest.permission.READ_PHONE_STATE) { allGranted, _ ->
+            PermissionX.request(this, Manifest.permission.READ_PHONE_STATE) { _, _ ->
                 mCountDownTimer?.start()
                 preLogin()
             }

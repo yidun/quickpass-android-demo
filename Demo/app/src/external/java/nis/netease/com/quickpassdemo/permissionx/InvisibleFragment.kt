@@ -1,8 +1,6 @@
 package nis.netease.com.quickpassdemo.permissionx
 
-import android.app.Activity
 import android.content.pm.PackageManager
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 
 /**
