@@ -183,6 +183,7 @@ public class DemoActivity extends AppCompatActivity {
                             quicklogin.quitActivity();
                             //一键登录成功 运营商token：accessCode获取成功
                             //拿着获取到的运营商token二次校验（建议放在自己的服务端）
+                            // 3.2.3版本及之后二次校验调用取号接口accessCode需要先URLEncoder.encode(accessCode, "UTF-8")
                         }
 
                         @Override
