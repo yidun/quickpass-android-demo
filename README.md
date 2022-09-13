@@ -433,7 +433,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setMaskNumberTopYOffset    | maskNumberTopYOffset:int              | 设置手机掩码顶部Y轴偏移，单位 dp |
 | setMaskNumberBottomYOffset | maskNumberBottomYOffset:int           | 设置手机掩码距离屏幕底部偏移，单位 dp |
 | setMaskNumberBackgroundRes | maskNumberBackgroundRes:String           | 设置手机掩码背景资源，该资源需要放置在 drawable 目录下 |
-| setMaskNumberListener      | maskNumberListener:MaskNumberListener | 设置点击手机掩码监听器，用于对手机掩码栏实现自定义功能（可参见 Demo 示例工程）|
+| setMaskNumberListener      | maskNumberListener:MaskNumberListener | 设置手机掩码外抛，用于对手机掩码栏实现背景和宽高等自定义功能（可参见 Demo 示例工程）|
 
 ##### 认证品牌
 
