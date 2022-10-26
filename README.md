@@ -566,7 +566,7 @@ setLandscape(true)
 ```
 setHideNavigation(true)
 ```
-2. 设置状态栏透明
+2. 设置状态栏透明(去除透明阴影)
 ```
 setStatusBarColor(android.R.color.transparent)
 ```
@@ -574,12 +574,12 @@ setStatusBarColor(android.R.color.transparent)
 
 ```
 <style name="Theme.ActivityTransparentStyle" parent="Theme.AppCompat.Light.NoActionBar">
-    <!--背景透明-->
-    <item name="android:windowBackground">@android:color/transparent</item>
-    <!--设置状态栏透明-->
-    <item name="android:statusBarColor">@android:color/transparent</item>
-    <!--延伸到顶部状态栏-->
-    <item name="android:windowTranslucentNavigation">true</item>
+      <!--背景透明-->
+      <item name="android:windowBackground">@android:color/transparent</item>
+      <!--状态栏透明/有一层阴影-->
+      <item name="android:windowTranslucentStatus">true</item>
+      <!--导航栏透明/有一层阴影-->
+      <item name="android:windowTranslucentNavigation">true</item>
 </style>
 ```
 4. 重置授权页的主题 theme
