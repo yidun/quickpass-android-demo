@@ -672,20 +672,6 @@ quickLogin.setPrivacyState(boolean isChecked)
 |----|----|--------|------|----|
 |isChecked|boolean|是|true| 复选框是否选中 |
 
-### 8. 设置授权页点击登录按钮loading是否显示(授权页拉起之后调用，非必须)
-
-#### 代码说明
-
-```
-quickLogin.setLoadingVisibility(boolean isVisible)
-```
-
-#### 参数说明
-
-|参数|类型|是否必填|默认值|描述|
-|----|----|--------|------|----|
-|isVisible|boolean|是|true| loading是否显示 |
-
 ### 8. 设置预取号超时时间(非必须)
 
 #### 代码说明
