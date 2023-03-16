@@ -102,7 +102,7 @@ SDK内部权限说明
 | ACCESS_NETWORK_STATE | 允许访问网络状态 | 区分移动网络或WiFi网络 |
 | CHANGE_NETWORK_STATE | 允许改变网络连接状态 | 设备在WiFi跟数据双开时，强行切换使用数据网络 |
 | CHANGE_WIFI_STATE | 允许改变WiFi网络连接状态 | 设备在WiFi跟数据双开时，强行切换使用 |
-| READ_PHONE_STATE | 允许读取手机状态 |（可选）获取IMSI用于判断双卡和换卡 |
+| READ_PHONE_STATE | 允许读取手机状态 | 获取IMSI用于判断双卡和换卡（可选，不赋予预取号成功率降低1%） |
 
 
 ### 混淆配置
