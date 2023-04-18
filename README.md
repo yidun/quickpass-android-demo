@@ -398,6 +398,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setNavigationBackIconWidth   | backIconWidth:int            | 设置导航栏返回图标的宽度，单位 dp             |
 | setNavigationBackIconHeight  | backIconHeight:int           | 设置导航栏返回图标的高度，单位 dp              |
 | setNavigationIconGravity  | navigationIconGravity:int           | 设置导航栏返回图标位置，居左Gravity.LEFT，居右Gravity.RIGHT             |
+| setNavigationIconMargin  | navigationIconMargin:int           | 设置导航栏返回图标上下左右的边距，单位 dp              |
 | setHideNavigationBackIcon    | isHideBackIcon:boolean       | 设置是否隐藏导航栏返回按钮                   |
 | setNavigationBackgroundColor | backgroundColor:int          | 设置导航栏背景颜色  |
 | setNavigationHeight          | navHeight:int                | 设置导航栏高度，单位 dp    |
