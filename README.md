@@ -514,7 +514,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocolPageNavTitleDpSize    | protocolNavTitleDpSize:int             | 设置协议 Web 页面导航栏标题大小，单位 dp |
 | setProtocolPageNavBackIconWidth  | protocolNavBackIconWidth:int            | 设置协议 Web 页面导航栏返回按钮宽度，单位 dp |
 | setProtocolPageNavBackIconHeight | protocolNavBackIconHeight:int          | 设置协议 Web 页面导航栏返回按钮高度，单位 dp |
-
+| setProtocolPageNavBackIconMargin | protocolNavBackIconMargin:int          | 设置协议 Web 页面导航栏返回按钮距离左边的距离，单位 dp |
 
 ##### 其他
 
