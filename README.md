@@ -493,7 +493,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setHidePrivacySmh       | hidePrivacySmh:boolean             | 是否隐藏书名号 |
 | setProtocolText             | protocolText:String              | 设置隐私栏协议文本 |
 | setProtocolLink             | protocolLink:String              | 设置隐私栏协议链接 |
-| setProtocolConnect          | protocolConnect:String           | 自定义隐私栏协议连接符"和" |
+| setProtocolConnect          | protocolConnect:String           | 运营商协议与自定义隐私栏协议连接符"和" |
 | setProtocol2Text            | protocol2Text:String             | 设置隐私栏协议 2 文本 |
 | setProtocol2Link            | protocol2Link:String             | 设置隐私栏协议 2 链接 |
 | setProtocol3Text            | protocol3Text:String             | 设置隐私栏协议 3 文本 |
