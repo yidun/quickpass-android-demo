@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.3.5'
+implementation 'io.github.yidun:quicklogin:3.3.4.2'
 ```
 ### 本地手动依赖
 
