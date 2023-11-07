@@ -110,8 +110,8 @@ SDK内部权限说明
 在 proguard-rules.pro 文件中添加如下混淆规则
 
 ```
--dontwarn com.cmic.sso.sdk.**
--keep class com.cmic.sso.**{*;}
+-dontwarn com.cmic.gen.sdk.**
+-keep class com.cmic.gen.sdk.**{*;}
 -dontwarn com.sdk.**
 -keep class com.sdk.** { *;}
 -keep class cn.com.chinatelecom.account.**{*;}
