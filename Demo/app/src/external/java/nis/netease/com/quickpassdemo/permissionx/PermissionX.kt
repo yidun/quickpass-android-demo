@@ -17,7 +17,7 @@ import androidx.fragment.app.FragmentActivity
 object PermissionX {
     private const val TAG = "InvisibleFragment"
 
-    fun hasPermissions(@NonNull context: Context, vararg permissions: String): Boolean {
+    fun hasPermissions(context: Context, vararg permissions: String): Boolean {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             Log.w(
                 TAG,

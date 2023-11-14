@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginTokenListener
-import kotlinx.android.synthetic.external.activity_select.*
-import nis.netease.com.quickpassdemo.MyApplication
-import nis.netease.com.quickpassdemo.R
+import nis.netease.com.quickpassdemo.databinding.ActivitySelectBinding
 import nis.netease.com.quickpassdemo.tools.UiConfigs
 import nis.netease.com.quickpassdemo.tools.showToast
 
@@ -18,46 +16,46 @@ import nis.netease.com.quickpassdemo.tools.showToast
  * @email liulingfeng@mistong.com
  */
 class SelectorActivity : BaseActivity() {
-
+    private var binding: ActivitySelectBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select)
+        binding = ActivitySelectBinding.inflate(layoutInflater).apply { setContentView(root) }
 
         initListeners()
     }
 
     private fun initListeners() {
-        demo_seletor_A?.setOnClickListener {
+        binding?.demoSeletorA?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getAConfig(this))
             openAuth()
         }
-        demo_seletor_B?.setOnClickListener {
+        binding?.demoSeletorB?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getBConfig(this))
             openAuth()
         }
-        demo_seletor_C?.setOnClickListener {
+        binding?.demoSeletorC?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getCConfig(
                 this
             ) { _, _ -> QuickLogin.getInstance().quitActivity() })
             openAuth()
         }
-        demo_seletor_D?.setOnClickListener {
+        binding?.demoSeletorD?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getDConfig(this))
             openAuth()
         }
-        demo_seletor_E?.setOnClickListener {
+        binding?.demoSeletorE?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getEConfig(this))
             openAuth()
         }
 
-        demo_seletor_F?.setOnClickListener {
+        binding?.demoSeletorF?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getFConfig(
                 this
             ) { _, _ -> "编辑".showToast(this) })
             openAuth()
         }
 
-        demo_benji?.setOnClickListener {
+        binding?.demoBenji?.setOnClickListener {
             startActivity(Intent(this, BenjiActivity::class.java))
         }
     }

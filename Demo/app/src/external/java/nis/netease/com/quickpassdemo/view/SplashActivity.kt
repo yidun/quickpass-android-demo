@@ -8,8 +8,8 @@ import android.os.CountDownTimer
 import android.util.Log
 import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginPreMobileListener
-import kotlinx.android.synthetic.external.activity_splash.*
 import nis.netease.com.quickpassdemo.R
+import nis.netease.com.quickpassdemo.databinding.ActivitySplashBinding
 import nis.netease.com.quickpassdemo.permissionx.PermissionX
 import nis.netease.com.quickpassdemo.tools.showToast
 
@@ -19,17 +19,18 @@ import nis.netease.com.quickpassdemo.tools.showToast
  * @desc
  * @email liulingfeng@mistong.com
  */
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity() {
     private var mCountDownTimer: MyCountDownTimer? = null
-
+    private var binding: ActivitySplashBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        binding = ActivitySplashBinding.inflate(layoutInflater).apply { setContentView(root) }
 
         mCountDownTimer = MyCountDownTimer(3000, 1000, object : CountDownListener {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
-                login_demo_countdown_tv?.text = "${millisUntilFinished / 1000}s跳过"
+                binding?.loginDemoCountdownTv?.text = "${millisUntilFinished / 1000}s跳过"
             }
 
             override fun onFinish() {
@@ -42,7 +43,7 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun setListeners() {
-        login_demo_countdown_tv?.setOnClickListener {
+        binding?.loginDemoCountdownTv?.setOnClickListener {
             gotoSelect()
         }
     }

@@ -13,7 +13,7 @@ class MyApplication : Application() {
     /**
      * 一键登录业务id
      */
-    private val onePassId: String = "b55f3c7d4729455c9c3fb23872065401"
+    private val onePassId: String = "易盾业务id"
 
     /**
      * 本机校验业务id

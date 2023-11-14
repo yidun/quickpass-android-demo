@@ -9,8 +9,8 @@ import com.netease.nis.basesdk.EncryptUtil.getRandomString
 import com.netease.nis.basesdk.HttpUtil
 import com.netease.nis.quicklogin.QuickLogin
 import com.netease.nis.quicklogin.listener.QuickLoginPreMobileListener
-import kotlinx.android.synthetic.external.activity_result.*
 import nis.netease.com.quickpassdemo.R
+import nis.netease.com.quickpassdemo.databinding.ActivityResultBinding
 import nis.netease.com.quickpassdemo.tools.generateSign
 import nis.netease.com.quickpassdemo.tools.showToast
 import org.json.JSONObject
@@ -24,16 +24,17 @@ import java.util.HashMap
  * @email liulingfeng@mistong.com
  */
 class ResultActivity : AppCompatActivity() {
-    private val businessId = "b55f3c7d4729455c9c3fb23872065401"
-    private val secretId = "a4c49cbb2b2420492e132b4c2e03634f"
-    private val secretKey = "72b2db9cb89c5c9d9efb1d1d9950a38e"
+    private val businessId = "易盾业务id"
+    private val secretId = "XXX"
+    private val secretKey = "XXX"
 
+    private var binding: ActivityResultBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_result)
+        binding = ActivityResultBinding.inflate(layoutInflater).apply { setContentView(root) }
 
         initData()
-        btn_retry.setOnClickListener {
+        binding?.btnRetry?.setOnClickListener {
             preLogin()
         }
     }
@@ -80,11 +81,11 @@ class ResultActivity : AppCompatActivity() {
                         val data = json.getJSONObject("data")
                         val mobileNumber = data.getString("phone")
                         if (!TextUtils.isEmpty(mobileNumber)) {
-                            tv_result.text = mobileNumber
+                            binding?.tvResult?.text = mobileNumber
                             "一键登录通过".showToast(this@ResultActivity)
                         } else {
                             val msg = json.getString("msg")
-                            tv_result.text = "错误码${code}错误信息${msg}"
+                            binding?.tvResult?.text = "错误码${code}错误信息${msg}"
                             Log.e("ResultActivity", "错误码${code}错误信息${msg}")
                         }
                     } else {
