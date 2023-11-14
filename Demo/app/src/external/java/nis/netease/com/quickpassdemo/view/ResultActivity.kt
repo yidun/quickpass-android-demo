@@ -24,9 +24,9 @@ import java.util.HashMap
  * @email liulingfeng@mistong.com
  */
 class ResultActivity : AppCompatActivity() {
-    private val businessId = "易盾业务id"
-    private val secretId = "xxx"
-    private val secretKey = "xxx"
+    private val businessId = "b55f3c7d4729455c9c3fb23872065401"
+    private val secretId = "a4c49cbb2b2420492e132b4c2e03634f"
+    private val secretKey = "72b2db9cb89c5c9d9efb1d1d9950a38e"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
