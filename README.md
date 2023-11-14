@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.3.1'
+implementation 'io.github.yidun:quicklogin:3.3.7.2'
 ```
 ### 本地手动依赖
 
@@ -110,8 +110,8 @@ SDK内部权限说明
 在 proguard-rules.pro 文件中添加如下混淆规则
 
 ```
--dontwarn com.cmic.sso.sdk.**
--keep class com.cmic.sso.**{*;}
+-dontwarn com.cmic.gen.sdk.**
+-keep class com.cmic.gen.sdk.**{*;}
 -dontwarn com.sdk.**
 -keep class com.sdk.** { *;}
 -keep class cn.com.chinatelecom.account.**{*;}
