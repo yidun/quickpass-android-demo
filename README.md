@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.3.8'
+implementation 'io.github.yidun:quicklogin:3.3.8.1'
 ```
 ### 本地手动依赖
 
@@ -491,9 +491,11 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyTextStartSize     | spVal:float                      | 设置隐私开始字体大小 |
 | setPrivacyLineSpacing       | add:float,mult:float             | 设置隐私行间距 add 行间距 mult 倍数 |
 | setHidePrivacySmh       | hidePrivacySmh:boolean             | 是否隐藏书名号 |
+| setProtocolConnect          | protocolConnect:String           | 运营商协议与自定义隐私栏协议连接符"和" |
+| setUserProtocolConnect      | userProtocolConnect:String       | 自定义隐私栏协议之间连接符"、" |
+| setOperatorPrivacyAtLast    | operatorPrivacyAtLast:boolean    | 运营商协议的位置是否在末尾  |
 | setProtocolText             | protocolText:String              | 设置隐私栏协议文本 |
 | setProtocolLink             | protocolLink:String              | 设置隐私栏协议链接 |
-| setProtocolConnect          | protocolConnect:String           | 运营商协议与自定义隐私栏协议连接符"和" |
 | setProtocol2Text            | protocol2Text:String             | 设置隐私栏协议 2 文本 |
 | setProtocol2Link            | protocol2Link:String             | 设置隐私栏协议 2 链接 |
 | setProtocol3Text            | protocol3Text:String             | 设置隐私栏协议 3 文本 |
@@ -536,6 +538,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setBackPressedAvailable| backPressedAvailable:boolean | 设置物理返回键是否可用 |
 | setLoadingVisible| loadingVisible:boolean | 点击登录按钮loading是否显示 |
 | setLoadingView| loadingView:ViewGroup | 自定义loadingView |
+| setVirtualButtonHidden| virtualButtonHidden:boolean | 是否隐藏虚拟按键 |
 
 ##### 弹窗模式
 
