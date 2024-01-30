@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.3.8.1'
+implementation 'io.github.yidun:quicklogin:3.3.9'
 ```
 ### 本地手动依赖
 
@@ -112,8 +112,8 @@ SDK内部权限说明
 ```
 -dontwarn com.cmic.gen.sdk.**
 -keep class com.cmic.gen.sdk.**{*;}
--dontwarn com.sdk.**
--keep class com.sdk.** { *;}
+-dontwarn com.unicom.online.account.shield.**
+-keep class com.unicom.online.account.shield.** {*;}
 -keep class cn.com.chinatelecom.account.**{*;}
 -keep public class * extends android.view.View
 -keep class com.netease.nis.quicklogin.entity.**{*;}
