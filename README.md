@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.4.0'
+implementation 'io.github.yidun:quicklogin:3.4.2'
 ```
 ### 本地手动依赖
 
@@ -471,7 +471,9 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | 方法                                                            | 参数                          | 说明 |
 | :-------------------------- | -------------------------------  |----------------------------------------------|
 | setPrivacyTextColor         | privacyTextColor:int             | 设置隐私栏文本颜色，不包括协议 ，如若隐私栏协议文案为：登录即同意《中国移动认证条款》且授权 QuickLogin 登录， 则该API对除协议‘《中国移动认证条款》’区域外的其余文本生效|
-| setPrivacyProtocolColor     | privacyProtocolColor:int         | 设置隐私栏协议颜色 。例如：登录即同意《中国移动认证条款》且授权 QuickLogin 登录 ， 则该 API 仅对‘《中国移动认证条款》’文案生效 |
+| setPrivacyDialogTextColor   | privacyDialogTextColor:int       | 设置隐私弹窗模式隐私栏文本颜色，不包括协议                                                                           |
+| setPrivacyProtocolColor     | privacyProtocolColor:int         | 设置隐私栏协议颜色 。例如：登录即同意《中国移动认证条款》且授权 QuickLogin 登录 ， 则该 API 仅对‘《中国移动认证条款》’文案生效  |
+| setPrivacyDialogProtocolColor| privacyProtocolColor:int         | 设置隐私弹窗隐私栏协议颜色   |
 | setPrivacySize              | privacySize:int                  | 设置隐私栏区域字体大小，单位 sp|
 | setPrivacyDpSize            | privacyDpSize:int                | 设置隐私栏区域字体大小，单位 dp|
 | setPrivacyTopYOffset        | privacyTopYOffset:int            | 设置隐私栏顶部Y轴偏移，单位 dp |
@@ -679,7 +681,15 @@ quickLogin.setPrivacyState(boolean isChecked)
 |----|----|--------|------|----|
 |isChecked|boolean|是|true| 复选框是否选中 |
 
-### 8. 设置预取号超时时间(非必须)
+### 8. 获取授权页协议复选框是否选中(授权页拉起之后调用，非必须)
+
+#### 代码说明
+
+```
+quickLogin.getPrivacyState()
+```
+
+### 9. 设置预取号超时时间(非必须)
 
 #### 代码说明
 
@@ -693,7 +703,7 @@ quickLogin.setPrefetchNumberTimeout(int timeout)
 |----|----|--------|------|----|
 |timeout|int|是|8| 单位秒 |
 
-### 9. 设置本机校验超时时间(非必须，仅联通有效)
+### 10. 设置本机校验超时时间(非必须，仅联通有效)
 
 #### 代码说明
 
@@ -707,7 +717,7 @@ quickLogin.setFetchNumberTimeout(int timeout)
 |----|----|--------|------|----|
 |timeout|int|是|5| 单位秒 |
 
-### 10. 返回 SDK 版本号(非必须)
+### 11. 返回 SDK 版本号(非必须)
 
 #### 代码说明
 
@@ -721,7 +731,7 @@ quickLogin.getSDKVersion()
 |----|----|
 | String | 版本号 |
 
-### 11. 设置是否打开日志(非必须)
+### 12. 设置是否打开日志(方便排查问题，非必须)
 
 #### 代码说明
 
@@ -735,7 +745,7 @@ quickLogin.setDebugMode(boolean debug)
 |----|----|--------|------|----|
 |debug|boolean|是|false| 是否打印日志 |
 
-### 12. 设置预取号携带额外参数(非必须)
+### 13. 设置预取号携带额外参数(非必须)
 
 #### 代码说明
 
@@ -749,7 +759,7 @@ quickLogin.setExtendData(JSONObject extendData)
 |----|----|--------|------|----|
 |extendData|JSONObject|是|无| 额外参数 |
 
-### 13. 清预取号缓存(非必须)
+### 14. 清预取号缓存(非必须)
 
 #### 代码说明
 
@@ -757,7 +767,7 @@ quickLogin.setExtendData(JSONObject extendData)
 quickLogin.clearScripCache()
 ```
 
-### 14. 移除自定义view(非必须)
+### 15. 移除自定义view(非必须)
 
 #### 代码说明
 
@@ -765,7 +775,7 @@ quickLogin.clearScripCache()
 quickLogin.removeCustomView(int positionType,View view)
 ```
 
-### 15. 本机校验
+### 16. 本机校验
 
 在初始化之后执行，本机校验和一键登录可共用初始化，本机校验界面需自行实现
 
