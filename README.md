@@ -178,6 +178,7 @@ public class DemoActivity extends AppCompatActivity {
         });
 
         Button btn = new Button(this);
+        quickLogin.setUnifyUiConfig(XXX);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
