@@ -114,6 +114,8 @@ SDK内部权限说明
 -keep class com.cmic.gen.sdk.**{*;}
 -dontwarn com.unicom.online.account.shield.**
 -keep class com.unicom.online.account.shield.** {*;}
+-dontwarn com.unicom.online.account.kernel.**
+-keep class com.unicom.online.account.kernel.** {*;}
 -keep class cn.com.chinatelecom.account.**{*;}
 -keep public class * extends android.view.View
 -keep class com.netease.nis.quicklogin.entity.**{*;}
