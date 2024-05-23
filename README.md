@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.4.2.4'
+implementation 'io.github.yidun:quicklogin:3.4.3'
 ```
 ### 本地手动依赖
 
@@ -192,7 +192,7 @@ public class DemoActivity extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onGetTokenError(String YDToken, String msg) {
+                        public void onGetTokenError(String YDToken, int code, String msg) {
                             quicklogin.quitActivity();
                         }
                     });
@@ -221,7 +221,7 @@ public class DemoActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onGetTokenError(String YDToken, String msg) {
+            public void onGetTokenError(String YDToken,int code, String msg) {
 
             }
         });
@@ -334,9 +334,10 @@ public interface QuickLoginTokenListener {
     /**
      * 获取运营商token失败
      * @param YDToken 易盾token
+     * @param code    错误异常码
      * @param msg     出错提示信息
      */
-    void onGetTokenError(String YDToken, String msg);
+    void onGetTokenError(String YDToken,int code, String msg);
 
      /**
      * 取消一键登录
@@ -809,9 +810,10 @@ public interface QuickLoginTokenListener {
     /**
      * 获取运营商token失败
      * @param YDToken 易盾token
+     * @param code    出错异常码
      * @param msg     出错提示信息
      */
-    void onGetTokenError(String YDToken, String msg);
+    void onGetTokenError(String YDToken, int code, String msg);
 }
 ```
 
