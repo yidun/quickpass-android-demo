@@ -187,14 +187,14 @@ public class DemoActivity extends AppCompatActivity {
                     quickLogin.onePass(new QuickLoginTokenListener() {
                         @Override
                         public void onGetTokenSuccess(String YDToken, String accessCode) {
-                            quicklogin.quitActivity();
+                            quickLogin.quitActivity();
                             //一键登录成功 运营商token：accessCode获取成功
                             //拿着获取到的运营商token二次校验（建议放在自己的服务端）
                         }
 
                         @Override
                         public void onGetTokenError(String YDToken, int code, String msg) {
-                            quicklogin.quitActivity();
+                            quickLogin.quitActivity();
                         }
                     });
                 }
