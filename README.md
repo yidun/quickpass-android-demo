@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.4.3'
+implementation 'io.github.yidun:quicklogin:3.4.3.1'
 ```
 ### 本地手动依赖
 
@@ -465,6 +465,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setLoginBtnTextColor          | loginBtnTextColor:int              | 设置登录按钮文本颜色 |
 | setLoginBtnWidth              | loginBtnWidth:int                  | 设置登录按钮宽度，单位 dp |
 | setLoginBtnHeight             | loginBtnHeight:int                 | 设置登录按钮高度，单位 dp |
+| setLoginBtnMarginLeft         | loginBtnMarginLeft:int             | 设置登录按钮距离屏幕左边间距，单位 dp |
+| setLoginBtnMarginRight        | loginBtnMarginRight:int            | 设置登录按钮距离屏幕右边间距，单位 dp |
 | setLoginBtnBackgroundRes      | loginBtnBackgroundRes:String       | 设置登录按钮背景资源，该资源需要放置在 drawable 目录下 |
 | setLoginBtnBackgroundDrawable | loginBtnBackgroundDrawable:Drawable| 设置登录按钮背景资源 Drawable 值 |
 | setLoginBtnTopYOffset         | loginBtnTopYOffset:int             | 设置登录按钮顶部Y轴偏移，单位 dp |
@@ -483,6 +485,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyDpSize            | privacyDpSize:int                | 设置隐私栏区域字体大小，单位 dp|
 | setPrivacyTopYOffset        | privacyTopYOffset:int            | 设置隐私栏顶部Y轴偏移，单位 dp |
 | setPrivacyBottomYOffset     | privacyBottomYOffset:int         | 设置隐私栏距离屏幕底部偏移，单位 dp |
+| setPrivacyWidth             | privacyWidth:int                 | 设置隐私栏宽度，单位 dp |
 | setPrivacyTextMarginLeft    | privacyTextMarginLeft:int        | 设置隐私栏复选框和文字内边距，单位 dp  |
 | setPrivacyMarginLeft        | privacyMarginLeft:int            | 设置隐私栏水平方向的偏移，单位 dp |
 | setPrivacyMarginRight       | privacyMarginRight:int           | 设置隐私栏右侧边距，单位 dp |
