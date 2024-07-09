@@ -569,7 +569,7 @@ setProtocolDialogMode(boolean isProtocolDialogMode) // 协议详情页是否开�
 |isBottomDialog|boolean|授权页弹窗是否贴于屏幕底部<br>true：显示在屏幕底部，dialogY 失效<br> false：不显示在屏幕底部，以 dialogY 参数为准
 
 ##### 设置横竖屏
-在 manifest 文件中，指定授权页 activity 的 screenOrientation 为 landscape 即可。也可以通过如下 api 设置
+可以通过如下 api 设置
 
 ```
 setLandscape(true)
