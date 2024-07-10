@@ -36,7 +36,7 @@ class SelectorActivity : BaseActivity() {
         binding?.demoSeletorC?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getCConfig(
                 this
-            ) { _, _ -> QuickLogin.getInstance().quitActivity() })
+            ) { _, _, _ -> QuickLogin.getInstance().quitActivity() })
             openAuth()
         }
         binding?.demoSeletorD?.setOnClickListener {
@@ -51,7 +51,7 @@ class SelectorActivity : BaseActivity() {
         binding?.demoSeletorF?.setOnClickListener {
             QuickLogin.getInstance().setUnifyUiConfig(UiConfigs.getFConfig(
                 this
-            ) { _, _ -> "编辑".showToast(this) })
+            ) { _, _, _ -> "编辑".showToast(this) })
             openAuth()
         }
 
@@ -61,7 +61,7 @@ class SelectorActivity : BaseActivity() {
     }
 
     private fun openAuth() {
-        QuickLogin.getInstance().onePass(object : QuickLoginTokenListener() {
+        QuickLogin.getInstance().onePass(object : QuickLoginTokenListener {
             override fun onGetTokenSuccess(token: String?, accessCode: String?) {
                 QuickLogin.getInstance().quitActivity()
                 Log.d("SelectorActivity", "易盾token${token}运营商token${accessCode}")
@@ -72,7 +72,7 @@ class SelectorActivity : BaseActivity() {
                 }
             }
 
-            override fun onGetTokenError(token: String?, msg: String?) {
+            override fun onGetTokenError(token: String?, code: Int, msg: String?) {
                 QuickLogin.getInstance().quitActivity()
                 QuickLogin.getInstance().clearScripCache(this@SelectorActivity)
                 msg?.showToast(this@SelectorActivity)

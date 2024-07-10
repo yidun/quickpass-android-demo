@@ -29,13 +29,13 @@ class BenjiActivity : AppCompatActivity() {
                 "请输入正确的手机号".showToast(this)
             } else {
                 QuickLogin.getInstance()
-                    .getToken(binding.etNumber.text.toString(), object : QuickLoginTokenListener() {
+                    .getToken(binding.etNumber.text.toString(), object : QuickLoginTokenListener {
                         override fun onGetTokenSuccess(token: String?, accessCode: String?) {
                             Log.d("获取授权码成功", "易盾token${token}运营商token${accessCode}")
                             // 服务端二次校验
                         }
 
-                        override fun onGetTokenError(token: String?, msg: String?) {
+                        override fun onGetTokenError(token: String?, code: Int, msg: String?) {
                             Log.e("获取授权码失败", "易盾token${token}错误信息${msg}")
                         }
 

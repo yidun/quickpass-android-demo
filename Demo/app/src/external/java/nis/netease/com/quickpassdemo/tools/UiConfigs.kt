@@ -83,7 +83,7 @@ object UiConfigs {
             .setBackgroundVideo("android.resource://" + context.packageName + "/" + R.raw.monkey, "bg_1080") // 设置视频背景
             .setLoadingVisible(true) // 点击授权页登录按钮loading
             .setLoadingView(loadingRel) // loading view自定义
-            .setLoginListener(object : LoginListener() {
+            .setLoginListener(object : LoginListener {
                 override fun onDisagreePrivacy(privacyTv: TextView?, btnLogin: Button?): Boolean {
                     privacyTv?.let {
                         val animator =
@@ -168,7 +168,7 @@ object UiConfigs {
             .setProtocolPageNavColor(Color.parseColor("#FFFFFF"))
             // 自定义控件在body
             .addCustomView(otherLoginRel, "relative", UnifyUiConfig.POSITION_IN_BODY, null)
-            .setLoginListener(object : LoginListener() {
+            .setLoginListener(object : LoginListener {
                 override fun onDisagreePrivacy(privacyTv: TextView?, btnLogin: Button?): Boolean {
                     btnLogin?.let { btn ->
                         if (btn.context is Activity) {

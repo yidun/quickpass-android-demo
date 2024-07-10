@@ -103,7 +103,7 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun preLogin() {
-        QuickLogin.getInstance().prefetchMobileNumber(object : QuickLoginPreMobileListener() {
+        QuickLogin.getInstance().prefetchMobileNumber(object : QuickLoginPreMobileListener {
             override fun onGetMobileNumberSuccess(token: String?, mobileNumber: String?) {
                 finish()
                 Log.d("预取号成功", "易盾token${token}掩码${mobileNumber}")
