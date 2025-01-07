@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.4.5'
+implementation 'io.github.yidun:quicklogin:3.4.7'
 ```
 ### 本地手动依赖
 
@@ -443,6 +443,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setMaskNumberBottomYOffset | maskNumberBottomYOffset:int           | 设置手机掩码距离屏幕底部偏移，单位 dp |
 | setMaskNumberBackgroundRes | maskNumberBackgroundRes:String           | 设置手机掩码背景资源，该资源需要放置在 drawable 目录下 |
 | setMaskNumberListener      | maskNumberListener:MaskNumberListener | 设置手机掩码外抛，用于对手机掩码栏实现背景和宽高等自定义功能（可参见 Demo 示例工程）|
+| setMaskNumberBold | isMaskNumberBold:boolean           | 设置手机掩码字体是否粗体 |
 
 ##### 认证品牌
 
@@ -454,6 +455,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setSloganTopYOffset    | sloganTopYOffset:int    | 设置认证品牌顶部 Y 轴偏移，单位 dp |
 | setSloganBottomYOffset | sloganBottomYOffset:int | 设置认证品牌距离屏幕底部偏移，单位 dp |
 | setSloganXOffset       | sloganXOffset:int       | 设置认证品牌水平方向的偏移，单位 dp |
+| setSloganBold       | isSloganBold:boolean       | 设置认证品牌字体是否粗体 |
 
 ##### 登录按钮
 
@@ -472,6 +474,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setLoginBtnTopYOffset         | loginBtnTopYOffset:int             | 设置登录按钮顶部Y轴偏移，单位 dp |
 | setLoginBtnBottomYOffset      | loginBtnBottomYOffset:int          | 设置登录按钮距离屏幕底部偏移，单位 dp |
 | setLoginBtnXOffset            | loginBtnXOffset:int                | 设置登录按钮水平方向的偏移，单位 dp |
+| setLoginBtnBold            | isLoginBtnBold:boolean                | 设置登录按钮字体是否粗体 |
 
 ##### 隐私协议
 
@@ -482,6 +485,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyProtocolColor     | privacyProtocolColor:int         | 设置隐私栏协议颜色 。例如：登录即同意《中国移动认证条款》且授权 QuickLogin 登录 ， 则该 API 仅对‘《中国移动认证条款》’文案生效  |
 | setPrivacyDialogProtocolColor| privacyProtocolColor:int         | 设置隐私弹窗隐私栏协议颜色   |
 | setPrivacySize              | privacySize:int                  | 设置隐私栏区域字体大小，单位 sp|
+| setPrivacyBold              | isPrivacyBold:boolean            | 设置隐私栏区域字体是否粗体 |
 | setPrivacyDpSize            | privacyDpSize:int                | 设置隐私栏区域字体大小，单位 dp|
 | setPrivacyTopYOffset        | privacyTopYOffset:int            | 设置隐私栏顶部Y轴偏移，单位 dp |
 | setPrivacyBottomYOffset     | privacyBottomYOffset:int         | 设置隐私栏距离屏幕底部偏移，单位 dp |
@@ -511,6 +515,36 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocol3Text            | protocol3Text:String             | 设置隐私栏协议 3 文本 |
 | setProtocol3Link            | protocol3Link:String             | 设置隐私栏协议 3 链接 |
 | setPrivacyTextEnd           | privacyTextEnd:String            | 设置隐私栏声明部分尾部文案。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"且授权易盾授予本机号码" |
+| setPrivacyDialogWidth | privacyDialogText:String | 协议未勾选隐私弹窗宽度 |
+| setPrivacyDialogHeight | privacyDialogText:String | 协议未勾选隐私弹窗高度 |
+| setPrivacyDialogBg | privacyDialogText:String | 协议未勾选隐私弹窗背景 |
+| setPrivacyDialogTitle | privacyDialogText:String | 协议未勾选隐私弹窗标题 |
+| setPrivacyDialogTitleSize | privacyDialogText:String | 协议未勾选隐私弹窗标题字体大小 |
+| setPrivacyDialogTitleColor | privacyDialogText:String | 协议未勾选隐私弹窗标题颜色 |
+| setPrivacyDialogTitleMarginTop | privacyDialogText:String | 协议未勾选隐私弹窗标题距离顶部的距离 |
+| setIsPrivacyDialogTitleBold | privacyDialogText:String | 协议未勾选隐私弹窗标题是否加粗 |
+| setPrivacyDialogContentStart | privacyDialogText:String | 协议未勾选隐私弹窗开始文本 |
+| setPrivacyDialogContentEnd | privacyDialogText:String | 协议未勾选隐私弹窗结束文本 |
+| setPrivacyDialogTextSize | privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
+| setIsPrivacyDialogContentBold | privacyDialogText:String | 协议未勾选隐私弹窗文本是否加粗 |
+| setPrivacyDialogContentMarginLeft | privacyDialogText:String | 协议未勾选隐私弹窗文本距离左边的距离 |
+| setPrivacyDialogContentMarginRight | privacyDialogText:String | 协议未勾选隐私弹窗文本距离右边的距离 |
+| setPrivacyDialogContentMarginTop | privacyDialogText:String | 协议未勾选隐私弹窗文本距离顶部的距离 |
+| setPrivacyDialogBtnTextSize | privacyDialogText:String | 协议未勾选隐私弹窗按钮文本大小 |
+| setPrivacyDialogBtnWidth | privacyDialogText:String | 协议未勾选隐私弹窗按钮宽度 |
+| setPrivacyDialogBtnHeight | privacyDialogText:String | 协议未勾选隐私弹窗按钮高度 |
+| setPrivacyDialogBtnMarginLeft | privacyDialogText:String | 协议未勾选隐私弹窗按钮距离左边距离 |
+| setPrivacyDialogBtnMarginRight | privacyDialogText:String | 协议未勾选隐私弹窗按钮距离右边距离 |
+| setPrivacyDialogBtnMarginTop | privacyDialogText:String | 协议未勾选隐私弹窗按钮距离顶部距离 |
+| setPrivacyDialogBtnMarginBottom | privacyDialogText:String | 协议未勾选隐私弹窗按钮距离底部距离 |
+| setPrivacyDialogBtnAgreeText | privacyDialogText:String | 协议未勾选隐私弹窗按钮同意文本|
+| setPrivacyDialogBtnAgreeTextColor | privacyDialogText:String | 协议未勾选隐私弹窗按钮同意文本颜色 |
+| setPrivacyDialogBtnAgreeBg | privacyDialogText:String | 协议未勾选隐私弹窗按钮同意文本背景 |
+| setPrivacyDialogBtnDisagreeText | privacyDialogText:String | 协议未勾选隐私弹窗按钮拒绝文本 |
+| setPrivacyDialogBtnDisagreeTextColor | privacyDialogText:String | 协议未勾选隐私弹窗按钮拒绝文本颜色 |
+| setPrivacyDialogBtnDisagreeBg | privacyDialogText:String | 协议未勾选隐私弹窗按钮拒绝文本背景 |
+| setPrivacyDialogText | privacyDialogText:String | 协议未勾选弹窗自定义message |
+| setPrivacyDialogAuto | privacyDialogAuto:boolean | 协议未勾选弹窗点击确认是否自动登录 |
 
 ##### 协议详情 Web 页面导航栏
 
@@ -527,6 +561,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocolPageNavBackIconWidth  | protocolNavBackIconWidth:int            | 设置协议 Web 页面导航栏返回按钮宽度，单位 dp |
 | setProtocolPageNavBackIconHeight | protocolNavBackIconHeight:int          | 设置协议 Web 页面导航栏返回按钮高度，单位 dp |
 | setProtocolPageNavBackIconMargin | protocolNavBackIconMargin:int          | 设置协议 Web 页面导航栏返回按钮距离左边的距离，单位 dp |
+| setProtocolNavTitleBold       | isProtocolNavTitleBold:boolean                   | 设置协议Web页面导航栏标题是否粗体 |
 
 ##### 其他
 
@@ -542,9 +577,6 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setActivityLifecycleCallbacks | Callbacks:ActivityLifecycleCallbacks | 设置登录页面生命周期监听回调 |
 | setActivityResultCallbacks    | callbacks:ActivityResultCallbacks | 设置登录页面 onActivityResult 回调 |
 | setProtocolBackgroundImage    | protocolBackgroundImage:String | 设置协议详情页背景，图片资源需放置到 drawable 目录下 |
-| setPrivacyDialogText    | privacyDialogText:String | 协议未勾选弹窗自定义message |
-| setPrivacyDialogTextSize| privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
-| setPrivacyDialogAuto    | privacyDialogAuto:boolean | 协议未勾选弹窗点击确认是否自动登录 |
 | setBackPressedAvailable| backPressedAvailable:boolean | 设置物理返回键是否可用 |
 | setLoadingVisible| loadingVisible:boolean | 点击登录按钮loading是否显示 |
 | setLoadingView| loadingView:ViewGroup | 自定义loadingView |
@@ -554,6 +586,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 
 ```
 setDialogMode(boolean isDialogMode, int dialogWidth, int dialogHeight, int dialogX, int dialogY, boolean isBottomDialog) // 授权页弹窗模式
+setDialogHideOnTouchOutside(boolean isDialogHideOnTouchOutside) // 授权页弹窗模式点击阴影部分是否允许关闭，默认允许
 setProtocolDialogMode(boolean isProtocolDialogMode) // 协议详情页是否开启弹窗模式
 ```
 
