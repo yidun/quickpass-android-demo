@@ -868,6 +868,8 @@ public interface QuickLoginTokenListener {
 | -7 |Aes解密失败|
 
 ### 移动运营商异常
+|code|说明|
+|----|--------|
 | 102101 |无网络|
 | 102102 |网络异常|
 | 102103 |未开启数据网络|
@@ -915,6 +917,8 @@ public interface QuickLoginTokenListener {
 | 200082 |服务器繁忙|
 
 ### 电信运营商异常
+|code|说明|
+|----|--------|
 | -64 |服务器繁忙|
 | -65 |服务器繁忙|
 | -10001 |取号失败|
@@ -953,6 +957,8 @@ public interface QuickLoginTokenListener {
 | 80801 |WIFI切换超时|
 
 ### 联通运营商异常
+|code|说明|
+|----|--------|
 | 101001 |授权码不能为空|
 | 101002 |认证的手机号不能为空|
 | 101003 |UiConfig不能为空|
