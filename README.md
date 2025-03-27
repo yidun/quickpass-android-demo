@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.4.9'
+implementation 'io.github.yidun:quicklogin:3.5.0'
 ```
 ### 本地手动依赖
 
@@ -166,13 +166,13 @@ public class DemoActivity extends AppCompatActivity {
         quickLogin.init(this, "业务id");
         quickLogin.prefetchMobileNumber(new QuickLoginPreMobileListener() {
             @Override
-            public void onGetMobileNumberSuccess(String YDToken, String mobileNumber) {
+            public void onGetMobileNumberSuccess(String ydToken, String mobileNumber) {
                 //预取号成功
                 prefetchResult = true;
             }
 
             @Override
-            public void onGetMobileNumberError(String YDToken, String msg) {
+            public void onGetMobileNumberError(String ydToken, int code, String msg) {
 
             }
         });
@@ -186,14 +186,14 @@ public class DemoActivity extends AppCompatActivity {
                 if (prefetchResult) {
                     quickLogin.onePass(new QuickLoginTokenListener() {
                         @Override
-                        public void onGetTokenSuccess(String YDToken, String accessCode) {
+                        public void onGetTokenSuccess(String ydToken, String accessCode) {
                             quickLogin.quitActivity();
                             //一键登录成功 运营商token：accessCode获取成功
                             //拿着获取到的运营商token二次校验（建议放在自己的服务端）
                         }
 
                         @Override
-                        public void onGetTokenError(String YDToken, int code, String msg) {
+                        public void onGetTokenError(String ydToken, int code, String msg) {
                             quickLogin.quitActivity();
                         }
                     });
@@ -216,13 +216,13 @@ public class DemoActivity extends AppCompatActivity {
         quickLogin.init(this,"业务id");
         quickLogin.getToken("手机号码", new QuickLoginTokenListener() {
             @Override
-            public void onGetTokenSuccess(String YDToken, String accessCode) {
+            public void onGetTokenSuccess(String ydToken, String accessCode) {
                 //运营商token：accessCode获取成功
                 //拿着获取到的运营商token二次校验（建议放在自己的服务端）
             }
 
             @Override
-            public void onGetTokenError(String YDToken,int code, String msg) {
+            public void onGetTokenError(String ydToken,int code, String msg) {
 
             }
         });
@@ -287,17 +287,17 @@ quickLogin.prefetchMobileNumber(QuickLoginPreMobileListener listener)
 public interface QuickLoginPreMobileListener {
     /**
      * 预期号成功
-     * @param YDToken      易盾Token
+     * @param ydToken      易盾Token
      * @param mobileNumber 获取的手机号码掩码
      */
-    void onGetMobileNumberSuccess(String YDToken, String mobileNumber);
+    void onGetMobileNumberSuccess(String ydToken, String mobileNumber);
 
     /**
      * 预取号失败
-     * @param YDToken 易盾Token
+     * @param ydToken 易盾Token
      * @param msg     获取手机号掩码失败原因
      */
-    void onGetMobileNumberError(String YDToken, String msg);
+    void onGetMobileNumberError(String ydToken, int code, String msg);
 }
 ```
 
@@ -327,18 +327,18 @@ quickLogin.onePass(QuickLoginTokenListener listener)
 public interface QuickLoginTokenListener {
     /**
      * 获取运营商token成功
-     * @param YDToken    易盾token
+     * @param ydToken    易盾token
      * @param accessCode 运营商accessCode
      */
-    void onGetTokenSuccess(String YDToken, String accessCode);
+    void onGetTokenSuccess(String ydToken, String accessCode);
 
     /**
      * 获取运营商token失败
-     * @param YDToken 易盾token
+     * @param ydToken 易盾token
      * @param code    错误异常码
      * @param msg     出错提示信息
      */
-    void onGetTokenError(String YDToken,int code, String msg);
+    void onGetTokenError(String ydToken,int code, String msg);
 
      /**
      * 取消一键登录
@@ -839,18 +839,18 @@ getToken(String mobileNumber，QuickLoginTokenListener listener)
 public interface QuickLoginTokenListener {
     /**
      * 获取运营商token成功
-     * @param YDToken    易盾token
+     * @param ydToken    易盾token
      * @param accessCode 运营商accessCode
      */
-    void onGetTokenSuccess(String YDToken, String accessCode);
+    void onGetTokenSuccess(String ydToken, String accessCode);
 
     /**
      * 获取运营商token失败
-     * @param YDToken 易盾token
+     * @param ydToken 易盾token
      * @param code    出错异常码
      * @param msg     出错提示信息
      */
-    void onGetTokenError(String YDToken, int code, String msg);
+    void onGetTokenError(String ydToken, int code, String msg);
 }
 ```
 
