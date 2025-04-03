@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.5.0'
+implementation 'io.github.yidun:quicklogin:3.5.1'
 ```
 ### 本地手动依赖
 
@@ -735,7 +735,7 @@ quickLogin.getPrivacyState()
 #### 代码说明
 
 ```
-quickLogin.setPrefetchNumberTimeout(int timeout)
+quickLogin.setPrefetchNumberTotalTimeout(int timeout)
 ```
 
 #### 参数说明
