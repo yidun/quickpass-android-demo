@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.5.1'
+implementation 'io.github.yidun:quicklogin:3.5.6'
 ```
 ### 本地手动依赖
 
@@ -499,6 +499,8 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyTextGravityCenter | privacyTextGravityCenter:boolean | 设置隐私栏文案换行后是否居中对齐，如果为 true 则居中对齐，否则左对齐 |
 | setPrivacyCheckBoxWidth     | privacyCheckBoxWidth:int         | 设置隐私栏复选框宽度，单位 dp |
 | setPrivacyCheckBoxHeight    | privacyCheckBoxHeight:int        | 设置隐私栏复选框高度，单位 dp |
+| setPrivacyCheckBoxRlWidth     | privacyCheckBoxRlWidth:int     | 设置隐私栏复选框外围宽度，单位 dp |
+| setPrivacyCheckBoxRlHeight    | privacyCheckBoxRlHeight:int    | 设置隐私栏复选框外围高度，单位 dp |
 | setCheckedImageName         | checkedImageName:String          | 设置隐私栏复选框选中时的图片资源，该图片资源需要放到 drawable 目录下 |
 | setUnCheckedImageName       | unCheckedImageName:String        | 设置隐私栏复选框未选中时的图片资源，该图片资源需要放到 drawable 目录下 |
 | setPrivacyTextStart         | privacyTextStart:String          |  设置隐私栏声明部分起始文案 。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"登录即同意" |
@@ -544,6 +546,9 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setPrivacyDialogBtnDisagreeText | privacyDialogBtnDisagreeText:String | 协议未勾选隐私弹窗按钮拒绝文本 |
 | setPrivacyDialogBtnDisagreeTextColor | privacyDialogBtnDisagreeTextColor:int | 协议未勾选隐私弹窗按钮拒绝文本颜色 |
 | setPrivacyDialogBtnDisagreeBg | privacyDialogBtnDisagreeBg:String | 协议未勾选隐私弹窗按钮拒绝文本背景 |
+| setPrivacyDialogBtnDisagreeBg | privacyDialogBtnDisagreeBg:String | 协议未勾选隐私弹窗按钮拒绝文本背景 |
+| setPrivacyDialogDimAmount | privacyDialogDimAmount:float | 协议未勾选隐私弹窗蒙层透明度|
+| setPrivacyDialogTextTypeface | privacyDialogTextTf:Typeface | 协议未勾选隐私弹窗文本字体|
 | setPrivacyDialogText | privacyDialogText:String | 协议未勾选弹窗自定义message |
 | setPrivacyDialogAuto | privacyDialogAuto:boolean | 协议未勾选弹窗点击确认是否自动登录 |
 
@@ -582,6 +587,7 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setLoadingVisible| loadingVisible:boolean | 点击登录按钮loading是否显示 |
 | setLoadingView| loadingView:ViewGroup | 自定义loadingView |
 | setVirtualButtonHidden| virtualButtonHidden:boolean | 是否隐藏虚拟按键 |
+| setThemeId| themeId:int | 设置授权页主题 |
 
 ##### 弹窗模式
 
