@@ -516,23 +516,28 @@ quickLogin.setUnifyUiConfig(UnifyUiConfig uiConfig)
 | setProtocol2Link            | protocol2Link:String             | 设置隐私栏协议 2 链接 |
 | setProtocol3Text            | protocol3Text:String             | 设置隐私栏协议 3 文本 |
 | setProtocol3Link            | protocol3Link:String             | 设置隐私栏协议 3 链接 |
+| setProtocol4Text            | protocol4Text:String             | 设置隐私栏协议 4 文本 |
+| setProtocol4Link            | protocol4Link:String             | 设置隐私栏协议 4 链接 |
 | setPrivacyTextEnd           | privacyTextEnd:String            | 设置隐私栏声明部分尾部文案。如：隐私栏声明为"登录即同意《隐私政策》和《中国移动认证条款》且授权易盾授予本机号码"，则可传入"且授权易盾授予本机号码" |
 | setPrivacyDialogWidth | privacyDialogWidth:int | 协议未勾选隐私弹窗宽度 |
 | setPrivacyDialogHeight | privacyDialogHeight:int | 协议未勾选隐私弹窗高度 |
 | setPrivacyDialogBg | privacyDialogBg:String | 协议未勾选隐私弹窗背景 |
 | setPrivacyDialogTitle | privacyDialogTitle:String | 协议未勾选隐私弹窗标题 |
 | setPrivacyDialogTitleSize | privacyDialogTitleSize:float | 协议未勾选隐私弹窗标题字体大小 |
+| setPrivacyDialogTitleDpSize | privacyDialogTitleDpSize:float | 协议未勾选隐私弹窗标题字体大小，单位dp |
 | setPrivacyDialogTitleColor | privacyDialogTitleColor:int | 协议未勾选隐私弹窗标题颜色 |
 | setPrivacyDialogTitleMarginTop | privacyDialogTitleMarginTop:int | 协议未勾选隐私弹窗标题距离顶部的距离 |
 | setIsPrivacyDialogTitleBold | isPrivacyDialogTitleBold:boolean | 协议未勾选隐私弹窗标题是否加粗 |
 | setPrivacyDialogContentStart | privacyDialogContentStart:String | 协议未勾选隐私弹窗开始文本 |
 | setPrivacyDialogContentEnd | privacyDialogContentEnd:String | 协议未勾选隐私弹窗结束文本 |
-| setPrivacyDialogTextSize | privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
+| setPrivacyDialogTextSize | privacyDialogTextDpSize:float | 协议未勾选弹窗文本字体大小，单位dp |
+| setPrivacyDialogTextDpSize | privacyDialogTextSize:float | 协议未勾选弹窗文本字体大小 |
 | setIsPrivacyDialogContentBold | isPrivacyDialogContentBold:boolean | 协议未勾选隐私弹窗文本是否加粗 |
 | setPrivacyDialogContentMarginLeft | privacyDialogContentMarginLeft:int | 协议未勾选隐私弹窗文本距离左边的距离 |
 | setPrivacyDialogContentMarginRight | setPrivacyDialogContentMarginRight:int | 协议未勾选隐私弹窗文本距离右边的距离 |
 | setPrivacyDialogContentMarginTop | privacyDialogContentMarginTop:int | 协议未勾选隐私弹窗文本距离顶部的距离 |
 | setPrivacyDialogBtnTextSize | privacyDialogBtnTextSize:float | 协议未勾选隐私弹窗按钮文本大小 |
+| setPrivacyDialogBtnTextDpSize | privacyDialogBtnTextDpSize:float | 协议未勾选隐私弹窗按钮文本大小，单位dp |
 | setIsPrivacyDialogBtnTextBold | isPrivacyDialogBtnTextBold:boolean | 协议未勾选隐私弹窗按钮文本是否加粗 |
 | setPrivacyDialogBtnWidth | privacyDialogBtnWidth:int | 协议未勾选隐私弹窗按钮宽度 |
 | setPrivacyDialogBtnHeight | privacyDialogBtnHeight:int | 协议未勾选隐私弹窗按钮高度 |
