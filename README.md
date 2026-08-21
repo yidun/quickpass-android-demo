@@ -10,7 +10,7 @@
 ## 兼容性
 | 条目        | 说明                                                                      |
 | ----------- | -----------------------------------------------------------------------  |
-| 适配版本    | minSdkVersion 16 及以上版本                                                 |
+| 适配版本    | minSdkVersion 19 及以上版本                                                 |
 
 ## 注意事项
 <font color=red>***和其他易盾产品一起使用需要考虑版本兼容性，若同时接多个易盾sdk，需要测试回归下是否有异常***</font>
@@ -45,7 +45,7 @@ allprojects {
 在对应 module 的 build.gradle 中添加依赖
 
 ```
-implementation 'io.github.yidun:quicklogin:3.6.0'
+implementation 'io.github.yidun:quicklogin:3.6.1.4'
 ```
 ### 本地手动依赖
 
